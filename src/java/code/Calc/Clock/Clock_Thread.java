@@ -5,10 +5,10 @@ public class Clock_Thread implements Runnable {
 
     private final Thread thread;
     private boolean running = false;
-    private final double tps;
-    private final double fps;
-    private final double delayTick;
-    private final double delayFrame;
+    private double tps;
+    private double fps;
+    private double delayTick;
+    private double delayFrame;
     private double lastTick = 0.0;
     private double lastFrame = 0.0;
 
@@ -29,9 +29,10 @@ public class Clock_Thread implements Runnable {
 
     @Override
     public void run() {
-        lastTick = getNTime();
-        lastFrame = getNTime();
-        aTime = getNTime();
+        double nowTime = System.nanoTime();
+        lastTick = nowTime;
+        lastFrame = nowTime;
+        aTime = nowTime;
         while (running) {
 
             if (getNTime() - lastTick >= delayTick) {
@@ -78,32 +79,64 @@ public class Clock_Thread implements Runnable {
         return tps;
     }
 
+    public void setTps(double tps){
+        this.tps = tps;
+    }
+
     public double getFPS(){
         return fps;
+    }
+
+    public void setFps(double fps){
+        this.fps = fps;
     }
 
     public double getDelayTick(){
         return delayTick;
     }
 
+    public void setDelayTick(double delayTick){
+        this.delayTick = delayTick;
+    }
+
     public double getDelayFrame(){
         return delayFrame;
+    }
+
+    public void setDelayFrame(double delayFrame){
+        this.delayFrame = delayFrame;
     }
 
     public double getLastTick(){
         return lastTick;
     }
 
+    public void setLastTick(double lastTick){
+        this.lastTick = lastTick;
+    }
+
     public double getLastFrame(){
         return lastFrame;
+    }
+
+    public void setLastFrame(double lastFrame){
+        this.lastFrame = lastFrame;
     }
 
     public double getATime(){
         return aTime;
     }
 
+    public void setATime(double aTime){
+        this.aTime = aTime;
+    }
+
     public double getBTime(){
         return bTime;
+    }
+
+    public void setBTime(double bTime){
+        this.bTime = bTime;
     }
 
     public boolean isRunning(){
