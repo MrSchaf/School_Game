@@ -5,65 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61ec9028-591e-4d49-87cb-a28e96710091" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/S32_Game.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/S32_Game/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/S32_Game/code/calc/Clock/Clock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/S32_Game/code/calc/Clock/Clock_Thread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/S32_Game/settings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/Action_Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/Clock/Action_ClockFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/Clock/Action_ClockTick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/Clock/Action_ClockTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_KeyAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_KeyPress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_KeyRelease.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Mouse/Action_MouseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Mouse/Action_MousePress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Mouse/Action_MouseRelease.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Clock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Clock_Thread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Frame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Tick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Time.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Coordinate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation_NoGen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Math/Math.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Math/Math_Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Settings/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_KeyListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_MouseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Panel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Image/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Image/Image_Paint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Image/Resolution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out_Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/files/images/Generation/generation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/files/images/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/settings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +48,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -147,6 +92,10 @@
       <workItem from="1673351591002" duration="668000" />
       <workItem from="1673354430142" duration="174000" />
       <workItem from="1673360471128" duration="1675000" />
+      <workItem from="1673683669296" duration="611000" />
+      <workItem from="1673725242490" duration="91000" />
+      <workItem from="1673725994380" duration="176000" />
+      <workItem from="1673726305781" duration="178000" />
     </task>
     <servers />
   </component>
@@ -158,7 +107,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
