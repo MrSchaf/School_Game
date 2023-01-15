@@ -18,4 +18,23 @@ public class Math {
         return java.lang.Math.sin(angle);
     }
 
+    public static int max(int a, int b){
+        int x = a;
+
+        if(b > a){
+            x = b;
+        }
+
+        return x;
+    }
+
+    public static int min(int a, int b){
+        int x = a;
+
+        if(b < a){
+            x = b;
+        }
+
+        return x;
+    }
 }

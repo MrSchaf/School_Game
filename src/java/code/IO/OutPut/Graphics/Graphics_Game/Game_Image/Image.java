@@ -1,9 +1,10 @@
-package code.IO.OutPut.Graphics.Game_Graphics.Game_Image;
+package code.IO.OutPut.Graphics.Graphics_Game.Game_Image;
 
 import code.Calc.Game.World.Coordinate;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.net.URL;
 
 public class Image {
@@ -18,15 +19,24 @@ public class Image {
     }
 
     private void initImage() {
-        //image = new BufferedImage(resolution.getWidth(), resolution.getHeight(), BufferedImage.TYPE_INT_RGB);
+        image = new BufferedImage(resolution.getWidth(), resolution.getHeight(), BufferedImage.TYPE_INT_RGB);
         URL url = getClass().getClassLoader().getResource("files/images/img.png");
+        BufferedImage input;
 
         try {
-            image = ImageIO.read(url);
+            input = ImageIO.read(url);
+            Image_Paint.paint(image.getGraphics(), input, resolution);
+            URL imageURL = getClass().getClassLoader().getResource("files/images/Image.png");
+            File file = new File(imageURL.toURI());
+            ImageIO.write(image, "png", file);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void repaint() {
+
     }
 
     public BufferedImage getImage(){

@@ -9,6 +9,11 @@ public class Coordinate {
         this.y = y;
     }
 
+    public Coordinate(Coordinate coordinate){
+        this.x = coordinate.getX();
+        this.y = coordinate.getY();
+    }
+
     public Coordinate(Coordinate coordinate, int x, int y) {
         this.x = coordinate.getX() + x;
         this.y = coordinate.getY() + y;
@@ -27,7 +32,7 @@ public class Coordinate {
     public boolean toTopLeft(Coordinate that){
         boolean same = false;
 
-        if(this.getX() >= that.getX()){
+        if(this.getX() <= that.getX()){
             if(this.getY() >= that.getY()){
                 same = true;
             }
@@ -52,7 +57,7 @@ public class Coordinate {
         boolean same = false;
 
         if(this.getX() >= that.getX()){
-            if(this.getY() >= that.getY()){
+            if(this.getY() <= that.getY()){
                 same = true;
             }
         }
@@ -63,8 +68,8 @@ public class Coordinate {
     public boolean toBottomLeft(Coordinate that){
         boolean same = false;
 
-        if(this.getX() >= that.getX()){
-            if(this.getY() >= that.getY()){
+        if(this.getX() <= that.getX()){
+            if(this.getY() <= that.getY()){
                 same = true;
             }
         }

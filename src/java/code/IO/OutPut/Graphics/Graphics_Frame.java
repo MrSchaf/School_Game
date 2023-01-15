@@ -1,40 +1,36 @@
 package code.IO.OutPut.Graphics;
 
-import code.IO.OutPut.Graphics.Game_Graphics.Game_Panel;
+import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 
 import javax.swing.*;
 
 public class Graphics_Frame {
     private JFrame frame;
-    private int width;
-    private int height;
+    private Resolution size;
     private String title;
 
-    private final Game_Panel panel;
+    private Graphics_ContentPane contentPane;
 
-    public Graphics_Frame(int width, int height, String title, Game_Panel panel) {
-        this.width = width;
-        this.height = height;
+    public Graphics_Frame(Resolution resolution, String title) {
+        size = resolution;
         this.title = title;
-        this.panel = panel;
 
         initFrame();
+        initPanel();
+
+        frame.setVisible(true);
     }
 
     private void initFrame(){
-        frame = new JFrame(title){
-            @Override
-            public void paint(java.awt.Graphics g) {
-                super.paint(g);
-                panel.getPannel().paint(g);
-                System.out.println("Frame: " + frame.getWidth() + " " + frame.getHeight());
-            }
-        };
-        frame.setSize(width, height);
+        frame = new JFrame(title);
+        frame.setSize(size.getWidth(), size.getHeight());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(panel.getPannel());
         frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+    }
+
+    private void initPanel(){
+        contentPane = new Graphics_ContentPane(size);
+        frame.setContentPane(contentPane.getPanel());
     }
 
     public void frame(){
@@ -45,24 +41,16 @@ public class Graphics_Frame {
         return frame;
     }
 
-    public int getWidth(){
-        return width;
-    }
-
-    public int getHeight(){
-        return height;
+    public Resolution getSize(){
+        return size;
     }
 
     public String getTitle(){
         return title;
     }
 
-    public void setWidth(int width){
-        this.width = width;
-    }
-
-    public void setHeight(int height){
-        this.height = height;
+    public void setSize(Resolution size){
+        this.size = size;
     }
 
     public void setTitle(String title){
