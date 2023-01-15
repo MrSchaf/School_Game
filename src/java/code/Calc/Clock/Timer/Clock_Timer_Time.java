@@ -7,6 +7,7 @@ public class Clock_Timer_Time extends Clock_Timer {
     private double timeDelay;
     private double timeLeft;
     private int repeat;
+    private int repeated;
 
     /**
      * <p><strong>repeat = -1</strong><br/>infinite repeats</></p>
@@ -26,20 +27,28 @@ public class Clock_Timer_Time extends Clock_Timer {
     public boolean check() {
         boolean check = false;
 
-        timeLeft = (time - clock.getTime());
+        timeLeft = (time + timeDelay - clock.getTime());
 
         if(timeLeft <= 0){
             check = true;
-            time = clock.getTime();
+            setTimer();
+            repeated++;
             this.action();
 
             if(repeat > 0){
-                time += timeDelay;
                 repeat--;
+                if(repeat == 0){
+                    clock.removeTimer(this);
+                }
             }
         }
 
         return check;
+    }
+
+    @Override
+    public boolean repeat(){
+        return repeat != 0;
     }
 
     public double getTimeDelay() {
@@ -66,7 +75,12 @@ public class Clock_Timer_Time extends Clock_Timer {
         this.repeat = repeat;
     }
 
+    public void delete(){
+        clock.removeTimer(this);
+        clock.addTimer(new Clock_Timer(this));
+    }
+
     public String toString(){
-        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (timeDelay=" + timeDelay + ") (timeLeft=" + timeLeft + ") (tick=" + tick + ") (frame=" + frame + ") (repeat=" + repeat + ")]";
+        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (timeDelay=" + timeDelay + ") (timeLeft=" + timeLeft + ") (tick=" + tick + ") (frame=" + frame + ") (repeat=" + (repeat - 1) + ") (repeated=" + repeated + ")]";
     }
 }

@@ -1,5 +1,7 @@
 package code.IO.OutPut.Graphics;
 
+import code.IO.OutPut.Graphics.Game_Graphics.Game_Panel;
+
 import javax.swing.*;
 
 public class Graphics_Frame {
@@ -8,9 +10,9 @@ public class Graphics_Frame {
     private int height;
     private String title;
 
-    private final Graphics_Panel panel;
+    private final Game_Panel panel;
 
-    public Graphics_Frame(int width, int height, String title, Graphics_Panel panel) {
+    public Graphics_Frame(int width, int height, String title, Game_Panel panel) {
         this.width = width;
         this.height = height;
         this.title = title;

@@ -1,4 +1,4 @@
-package code.IO.OutPut.Graphics.Image;
+package code.IO.OutPut.Graphics.Game_Graphics.Game_Image;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;

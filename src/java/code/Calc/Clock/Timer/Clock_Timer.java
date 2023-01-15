@@ -21,6 +21,33 @@ public class Clock_Timer {
         this.frame = frame;
     }
 
+    public Clock_Timer(Clock_Timer_Time clock_timer){
+        this.clock = clock_timer.getClock();
+        this.name = clock_timer.getName();
+
+        this.time = clock_timer.getTime();
+        this.tick = clock_timer.getTick();
+        this.frame = clock_timer.getFrame();
+    }
+
+    public Clock_Timer(Clock_Timer_Frame clock_timer){
+        this.clock = clock_timer.getClock();
+        this.name = clock_timer.getName();
+
+        this.time = clock_timer.getTime();
+        this.tick = clock_timer.getTick();
+        this.frame = clock_timer.getFrame();
+    }
+
+    public Clock_Timer(Clock_Timer_Tick clock_timer){
+        this.clock = clock_timer.getClock();
+        this.name = clock_timer.getName();
+
+        this.time = clock_timer.getTime();
+        this.tick = clock_timer.getTick();
+        this.frame = clock_timer.getFrame();
+    }
+
     public boolean check(){
         return false;
     }
@@ -81,6 +108,12 @@ public class Clock_Timer {
 
     public void setFrame(int frame){
         this.frame = frame;
+    }
+
+    protected void setTimer(){
+        time = clock.getTime();
+        tick = clock.getTick();
+        frame = clock.getFrame();
     }
 
     public String toString(){

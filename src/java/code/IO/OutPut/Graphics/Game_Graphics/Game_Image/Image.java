@@ -1,4 +1,4 @@
-package code.IO.OutPut.Graphics.Image;
+package code.IO.OutPut.Graphics.Game_Graphics.Game_Image;
 
 import code.Calc.Game.World.Coordinate;
 

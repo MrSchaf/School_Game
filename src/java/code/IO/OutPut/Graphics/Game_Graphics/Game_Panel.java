@@ -1,13 +1,13 @@
-package code.IO.OutPut.Graphics;
+package code.IO.OutPut.Graphics.Game_Graphics;
 
-import code.IO.OutPut.Graphics.Image.Image;
-import code.IO.OutPut.Graphics.Image.Image_Paint;
-import code.IO.OutPut.Graphics.Image.Resolution;
+import code.IO.OutPut.Graphics.Game_Graphics.Game_Image.Image;
+import code.IO.OutPut.Graphics.Game_Graphics.Game_Image.Image_Paint;
+import code.IO.OutPut.Graphics.Game_Graphics.Game_Image.Resolution;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class Graphics_Panel {
+public class Game_Panel {
     private JPanel panel;
     private int width;
     private int height;
@@ -15,7 +15,7 @@ public class Graphics_Panel {
 
     private Image image;
 
-    public Graphics_Panel(int width, int height, Resolution resolution) {
+    public Game_Panel(int width, int height, Resolution resolution) {
         this.width = width;
         this.height = height;
         size = new Resolution(width, height);

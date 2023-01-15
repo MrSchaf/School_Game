@@ -65,11 +65,8 @@ public class Clock {
         Vector<Clock_Timer> times = new Vector<>(waiting.get("Times"));
         if(times.size() > 0){
             for (Clock_Timer time : times) {
-                if(time.check()){
-                    time.action();
-                    if(time.repeat()){
-                        waiting.get("Times").remove(time);
-                    }
+                if(time instanceof Clock_Timer_Time){
+                    time.check();
                 }
             }
         }
@@ -77,11 +74,8 @@ public class Clock {
         times = new Vector<>(waiting.get("Ticks"));
         if(times.size() > 0){
             for (Clock_Timer time : times) {
-                if(time.check()){
-                    time.action();
-                    if(time.repeat()){
-                        waiting.get("Ticks").remove(time);
-                    }
+                if(time instanceof Clock_Timer_Tick){
+                    time.check();
                 }
             }
         }
@@ -94,12 +88,7 @@ public class Clock {
         if(times.size() > 0){
             for (Clock_Timer time : times) {
                 if(time instanceof Clock_Timer_Frame){
-                    if(time.check()){
-                        time.action();
-                        if(time.repeat()){
-                            waiting.get("Frames").remove(time);
-                        }
-                    }
+                    time.check();
                 }
             }
         }
@@ -181,33 +170,25 @@ public class Clock {
         put(clockTime);
     }
 
-    public void removeTime(Clock_Timer time){
+    public void removeTimer(Clock_Timer time){
         times.remove(time.getName());
         removeWaitingTime(time);
     }
 
-    public void removeTime(String name){
+    public void removeTimer(String name){
         times.remove(name);
         removeWaitingTime(name);
     }
 
     public void removeWaitingTime(String name){
         waiting.forEach((key, value) -> {
-            for (Clock_Timer time : value) {
-                if(time.getName().equals(name)){
-                    value.remove(time);
-                }
-            }
+            value.removeIf(time -> time.getName().equals(name));
         });
     }
 
     public void removeWaitingTime(Clock_Timer time){
         waiting.forEach((key, value) -> {
-            for (Clock_Timer clockTime : value) {
-                if(clockTime.equals(time)){
-                    value.remove(clockTime);
-                }
-            }
+            value.removeIf(clockTime -> clockTime.equals(time));
         });
     }
 

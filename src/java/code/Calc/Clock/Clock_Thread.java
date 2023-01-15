@@ -48,7 +48,6 @@ public class Clock_Thread implements Runnable {
             bTime = getNTime();
             time += bTime - aTime;
             aTime = bTime;
-            clock.setTime(time / 1_000_000_000.0);
         }
     }
 
@@ -68,7 +67,7 @@ public class Clock_Thread implements Runnable {
     }
 
     public double getTime(){
-        return time;
+        return time / 1_000_000_000.0;
     }
 
     public void setTime(double time){

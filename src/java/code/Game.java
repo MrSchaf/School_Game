@@ -1,12 +1,10 @@
 package code;
 
-import code.Calc.Actions.Action_Listener;
-import code.Calc.Actions.Clock.Action_ClockTime;
 import code.Calc.Clock.Clock;
 import code.IO.InPut.In;
 import code.IO.OutPut.Graphics.Graphics_Frame;
-import code.IO.OutPut.Graphics.Graphics_Panel;
-import code.IO.OutPut.Graphics.Image.Resolution;
+import code.IO.OutPut.Graphics.Game_Graphics.Game_Panel;
+import code.IO.OutPut.Graphics.Game_Graphics.Game_Image.Resolution;
 import code.IO.OutPut.Out;
 
 public class Game {
@@ -24,11 +22,7 @@ public class Game {
         initInput();
         // initOutput();
 
-        Action_Listener action_listener = () -> {
-            System.out.println(clock.getTime());
-            System.out.println(clock.getTime("time"));
-        };
-        new Action_ClockTime(action_listener, clock, "time", 10.0, 4.0, 10);
+
 
         clock.start();
     }
@@ -53,7 +47,7 @@ public class Game {
     private void initOutput(){
         out = new Out();
         int width = 1280, height = 720;
-        frame = new Graphics_Frame(width, height, "Game", new Graphics_Panel(width, height, Resolution.RES_720p));
+        frame = new Graphics_Frame(width, height, "Game", new Game_Panel(width, height, Resolution.RES_720p));
 
     }
 }
