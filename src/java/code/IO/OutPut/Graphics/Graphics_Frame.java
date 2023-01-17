@@ -1,6 +1,8 @@
 package code.IO.OutPut.Graphics;
 
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
+import code.IO.OutPut.Graphics.Panels.Game_Panel;
+import code.IO.OutPut.Graphics.Panels.Menu_Panel;
 
 import javax.swing.*;
 
@@ -29,8 +31,12 @@ public class Graphics_Frame {
     }
 
     private void initPanel(){
-        contentPane = new Graphics_ContentPane(size);
-        frame.setContentPane(contentPane.getPanel());
+        contentPane = new Graphics_ContentPane(this.frame, size);
+        contentPane.addPanel("Game", new Game_Panel(size));
+        contentPane.addPanel("Menu", new Menu_Panel(size));
+        contentPane.setCurrentPanel("Menu");
+
+        frame.setContentPane(contentPane.getContainer());
     }
 
     public void frame(){
@@ -57,4 +63,15 @@ public class Graphics_Frame {
         this.title = title;
     }
 
+    public Graphics_ContentPane getContentPane(){
+        return contentPane;
+    }
+
+    public String getCurrentPanelName(){
+        return contentPane.getCurrentPanelName();
+    }
+
+    public void changePanel(String name){
+        contentPane.setCurrentPanel(name);
+    }
 }

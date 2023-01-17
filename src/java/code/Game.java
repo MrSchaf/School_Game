@@ -1,7 +1,10 @@
 package code;
 
+import code.Calc.Actions.Action_Listener;
+import code.Calc.Actions.Clock.Action_ClockTime;
 import code.Calc.Clock.Clock;
 import code.IO.InPut.In;
+import code.IO.OutPut.Graphics.Graphics_ContentPane;
 import code.IO.OutPut.Graphics.Graphics_Frame;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Out;
@@ -21,7 +24,20 @@ public class Game {
         initInput();
         initOutput();
 
+        Graphics_ContentPane g_cp = frame.getContentPane();
 
+        Action_Listener actionListener = () -> {
+            // System.out.println("Action Listener");
+            if(frame.getCurrentPanelName().equals("Game")){
+                System.out.println("Game -> Menu");
+                frame.changePanel("Menu");
+            } else {
+                System.out.println("Menu -> Game");
+                frame.changePanel("Game");
+            }
+        };
+
+        Action_ClockTime action_clockTime = new Action_ClockTime(actionListener, clock, "time", 0, 2, -1);
 
         clock.start();
     }

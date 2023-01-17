@@ -7,7 +7,7 @@ import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import javax.swing.*;
 
 public class Graphics_Panel {
-    private JPanel panel;
+    protected JPanel panel;
     private Resolution size;
     private Image image;
 
@@ -15,6 +15,8 @@ public class Graphics_Panel {
         panel = new JPanel();
         size = resolution;
         image = new Image(size);
+
+
     }
 
     public void paint() {
