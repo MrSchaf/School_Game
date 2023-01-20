@@ -7,9 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61ec9028-591e-4d49-87cb-a28e96710091" name="Changes" comment="made Frame able to change between Game_Panel and Menu_Panel">
+    <list default="true" id="61ec9028-591e-4d49-87cb-a28e96710091" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Game/Game_Image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Game/Game_Image/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +145,8 @@
       <workItem from="1673957043048" duration="2100000" />
       <workItem from="1673961474446" duration="6201000" />
       <workItem from="1673986571620" duration="228000" />
-      <workItem from="1674023716089" duration="340000" />
+      <workItem from="1674023716089" duration="397000" />
+      <workItem from="1674204659644" duration="2285000" />
     </task>
     <task id="LOCAL-00001" summary="workspace.xml file">
       <created>1673726578468</created>
@@ -179,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673986745550</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Started to implement displaying of image">
+      <created>1674024107367</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674024107367</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +235,18 @@
     <MESSAGE value="single time System.nanotime() method" />
     <MESSAGE value="Fixed Timers&#10;started with Graphics" />
     <MESSAGE value="made Frame able to change between Game_Panel and Menu_Panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="made Frame able to change between Game_Panel and Menu_Panel" />
+    <MESSAGE value="Started to implement displaying of image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to implement displaying of image" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

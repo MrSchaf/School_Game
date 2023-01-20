@@ -24,8 +24,8 @@ public class Graphics_ContentPane {
     }
 
     public void paint(){
-        contentPane.repaint();
         currentPanel.paint();
+        contentPane.repaint();
     }
 
     public void addPanel(String name, Graphics_Panel panel){
@@ -59,5 +59,16 @@ public class Graphics_ContentPane {
             }
         }
         return null;
+    }
+
+    public Resolution getSize(){
+        return resolution;
+    }
+
+    public void setSize(Resolution resolution){
+        this.resolution = resolution;
+        for (String name : panels.keySet()) {
+            panels.get(name).setSize(resolution);
+        }
     }
 }

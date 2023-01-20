@@ -40,7 +40,10 @@ public class Graphics_Frame {
     }
 
     public void frame(){
+        setSize(new Resolution(frame.getWidth(), frame.getHeight()));
+        contentPane.paint();
         frame.repaint();
+
     }
 
     public JFrame getFrame(){
@@ -57,6 +60,7 @@ public class Graphics_Frame {
 
     public void setSize(Resolution size){
         this.size = size;
+        contentPane.setSize(size);
     }
 
     public void setTitle(String title){

@@ -1,6 +1,7 @@
 package code;
 
 import code.Calc.Actions.Action_Listener;
+import code.Calc.Actions.Clock.Action_ClockFrame;
 import code.Calc.Actions.Clock.Action_ClockTime;
 import code.Calc.Clock.Clock;
 import code.IO.InPut.In;
@@ -27,17 +28,10 @@ public class Game {
         Graphics_ContentPane g_cp = frame.getContentPane();
 
         Action_Listener actionListener = () -> {
-            // System.out.println("Action Listener");
-            if(frame.getCurrentPanelName().equals("Game")){
-                System.out.println("Game -> Menu");
-                frame.changePanel("Menu");
-            } else {
-                System.out.println("Menu -> Game");
-                frame.changePanel("Game");
-            }
+            frame.frame();
         };
 
-        Action_ClockTime action_clockTime = new Action_ClockTime(actionListener, clock, "time", 0, 2, -1);
+        Action_ClockFrame action_clock = new Action_ClockFrame(actionListener, clock, "Frame", 0, 1, -1);
 
         clock.start();
     }
