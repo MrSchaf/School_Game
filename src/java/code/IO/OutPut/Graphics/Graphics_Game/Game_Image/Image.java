@@ -5,12 +5,11 @@ import code.Calc.Game.World.Coordinate;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.net.URL;
 
 public class Image {
     private BufferedImage image;
-    private String path;
+    private final String path;
     private Resolution resolution;
     private Coordinate middle;
 

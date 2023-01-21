@@ -2,16 +2,12 @@ package code;
 
 import code.Calc.Actions.Action_Listener;
 import code.Calc.Actions.Clock.Action_ClockFrame;
-import code.Calc.Actions.Clock.Action_ClockTick;
-import code.Calc.Actions.Clock.Action_ClockTime;
 import code.Calc.Clock.Clock;
 import code.IO.InPut.In;
 import code.IO.OutPut.Graphics.Graphics_ContentPane;
 import code.IO.OutPut.Graphics.Graphics_Frame;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Out;
-
-import java.awt.*;
 
 public class Game {
     private Clock clock;
