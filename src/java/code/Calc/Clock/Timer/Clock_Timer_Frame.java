@@ -4,15 +4,15 @@ import code.Calc.Actions.Clock.Action_ClockFrame;
 import code.Calc.Clock.Clock;
 
 public class Clock_Timer_Frame extends Clock_Timer {
-    private double frameDelay;
-    private double frameLeft;
+    private int frameDelay;
+    private int frameLeft;
     private int repeat;
     private int repeated;
 
     /**
-     * <p><strong>repeat < 0</strong><br/>infinite repeats</></p>
-     * <p><strong>repeat = 0</strong><br/>no repeats</></p>
-     * <p><strong>repeat > 0</strong><br/>repeats <em>repeat<em/> times</></p>
+     * <p><strong>repeat = -1</strong><br/>infinite repeats</p>
+     * <p><strong>repeat = 0</strong><br/>no repeats</p>
+     * <p><strong>repeat = x > 0</strong><br/>repeats x times</p>
      */
 
     public Clock_Timer_Frame(Clock clock, String name, Action_ClockFrame action, int frame, int frameDelay, int repeat) {
@@ -51,11 +51,11 @@ public class Clock_Timer_Frame extends Clock_Timer {
         return repeat != 0;
     }
 
-    public double getFrameDelay(){
+    public int getFrameDelay(){
         return frameDelay;
     }
 
-    public double getFrameLeft(){
+    public int getFrameLeft(){
         return frameLeft;
     }
 
@@ -63,11 +63,11 @@ public class Clock_Timer_Frame extends Clock_Timer {
         return repeat;
     }
 
-    public void setFrameDelay(double frameDelay){
+    public void setFrameDelay(int frameDelay){
         this.frameDelay = frameDelay;
     }
 
-    public void setFrameLeft(double frameLeft){
+    public void setFrameLeft(int frameLeft){
         this.frameLeft = frameLeft;
     }
 
@@ -81,6 +81,6 @@ public class Clock_Timer_Frame extends Clock_Timer {
     }
 
     public String toString(){
-        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (tick=" + tick + ") (frame=" + frame + ") (frameDelay=" + frameDelay + ") (frameLeft=" + frameLeft + ") (repeat=" + (repeat - 1) + ") (repeated=" + repeated + ")]";
+        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (tick=" + tick + ") (frame=" + frame + ") (frameDelay=" + frameDelay + ") (frameLeft=" + frameLeft + ") (repeat=" + repeat + ") (repeated=" + repeated + ")]";
     }
 }

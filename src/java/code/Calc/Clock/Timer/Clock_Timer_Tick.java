@@ -4,15 +4,15 @@ import code.Calc.Actions.Clock.Action_ClockTick;
 import code.Calc.Clock.Clock;
 
 public class Clock_Timer_Tick extends Clock_Timer{
-    private double tickDelay;
-    private double tickLeft;
+    private int tickDelay;
+    private int tickLeft;
     private int repeat;
     private int repeated;
 
     /**
-     * <p><strong>repeat = -1</strong><br/>infinite repeats</></p>
-     * <p><strong>repeat = 0</strong><br/>no repeats</></p>
-     * <p><strong>repeat = x > 0</strong><br/>repeats x times</></p>
+     * <p><strong>repeat = -1</strong><br/>infinite repeats</p>
+     * <p><strong>repeat = 0</strong><br/>no repeats</p>
+     * <p><strong>repeat = x > 0</strong><br/>repeats x times</p>
      */
 
     public Clock_Timer_Tick(Clock clock, String name, Action_ClockTick action, int tick, int TickDelay, int repeat) {
@@ -51,11 +51,11 @@ public class Clock_Timer_Tick extends Clock_Timer{
         return repeat != 0;
     }
 
-    public double getTickDelay() {
+    public int getTickDelay() {
         return tickDelay;
     }
 
-    public double getTickLeft() {
+    public int getTickLeft() {
         return tickLeft;
     }
 
@@ -63,11 +63,11 @@ public class Clock_Timer_Tick extends Clock_Timer{
         return repeat;
     }
 
-    public void setTickDelay(double tickDelay) {
+    public void setTickDelay(int tickDelay) {
         this.tickDelay = tickDelay;
     }
 
-    public void setTickLeft(double tickLeft) {
+    public void setTickLeft(int tickLeft) {
         this.tickLeft = tickLeft;
     }
 
@@ -81,6 +81,6 @@ public class Clock_Timer_Tick extends Clock_Timer{
     }
 
     public String toString(){
-        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (tick=" + tick + ") (tickDelay=" + tickDelay + ") (tickLeft=" + tickLeft + ") (frame=" + frame + ") (repeat=" + (repeat - 1) + ") (repeated=" + repeated + ")]";
+        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (tick=" + tick + ") (tickDelay=" + tickDelay + ") (tickLeft=" + tickLeft + ") (frame=" + frame + ") (repeat=" + repeat + ") (repeated=" + repeated + ")]";
     }
 }

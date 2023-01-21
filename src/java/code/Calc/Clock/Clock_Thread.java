@@ -22,7 +22,9 @@ public class Clock_Thread implements Runnable {
         this.tps = clock.getTPS();
         this.fps = clock.getFPS();
         this.delayTick = 1_000_000_000.0 / tps;
+        System.out.println("DelayTick: " + delayTick);
         this.delayFrame = 1_000_000_000.0 / fps;
+        System.out.println("DelayFrame: " + delayFrame);
 
         thread = new Thread(this);
     }

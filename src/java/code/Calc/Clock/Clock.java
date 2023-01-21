@@ -61,7 +61,6 @@ public class Clock {
     protected void tick(double delta) {
         tick++;
         time();
-//        System.out.println(getNow());
 
         Vector<Clock_Timer> times = new Vector<>(waiting.get("Times"));
         if(times.size() > 0){

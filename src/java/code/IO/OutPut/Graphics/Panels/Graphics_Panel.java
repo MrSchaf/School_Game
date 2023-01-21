@@ -28,7 +28,6 @@ public class Graphics_Panel {
     }
 
     public void paint() {
-        System.out.println("Resolution: " + size.getWidth() + "x" + size.getHeight());
         image.repaint();
         panel.repaint();
     }

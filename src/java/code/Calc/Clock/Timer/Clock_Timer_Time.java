@@ -10,9 +10,9 @@ public class Clock_Timer_Time extends Clock_Timer {
     private int repeated;
 
     /**
-     * <p><strong>repeat = -1</strong><br/>infinite repeats</></p>
-     * <p><strong>repeat = 0</strong><br/>no repeats</></p>
-     * <p><strong>repeat = x > 0</strong><br/>repeats x times</></p>
+     * <p><strong>repeat = -1</strong><br/>infinite repeats</p>
+     * <p><strong>repeat = 0</strong><br/>no repeats</p>
+     * <p><strong>repeat = x > 0</strong><br/>repeats x times</p>
      */
 
     public Clock_Timer_Time(Clock clock, String name, Action_ClockTime action, double time, double timeDelay, int repeat) {
@@ -81,6 +81,6 @@ public class Clock_Timer_Time extends Clock_Timer {
     }
 
     public String toString(){
-        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (timeDelay=" + timeDelay + ") (timeLeft=" + timeLeft + ") (tick=" + tick + ") (frame=" + frame + ") (repeat=" + (repeat - 1) + ") (repeated=" + repeated + ")]";
+        return "Clock_Timer_Time[(name=" + name + ") (time=" + time + ") (timeDelay=" + timeDelay + ") (timeLeft=" + timeLeft + ") (tick=" + tick + ") (frame=" + frame + ") (repeat=" + repeat + ") (repeated=" + repeated + ")]";
     }
 }
