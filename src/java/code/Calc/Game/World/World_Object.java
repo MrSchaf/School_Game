@@ -6,7 +6,6 @@ import code.Calc.Game.Objects.Object;
 public class World_Object extends Object {
     protected boolean solid;
 
-
     public World_Object(Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, int image) {
         super(coordinate, hitBox, rotation, solid, image);
     }

@@ -22,34 +22,34 @@ public class Clock_Thread implements Runnable {
         this.tps = clock.getTPS();
         this.fps = clock.getFPS();
         this.delayTick = 1_000_000_000.0 / tps;
-        System.out.println("DelayTick: " + delayTick);
         this.delayFrame = 1_000_000_000.0 / fps;
-        System.out.println("DelayFrame: " + delayFrame);
 
         thread = new Thread(this);
     }
 
     @Override
     public void run() {
-        double nowTime = System.nanoTime();
+        double nowTime = getNTime();
         lastTick = nowTime;
         lastFrame = nowTime;
         aTime = nowTime;
-        while (running) {
 
-            if (getNTime() - lastTick >= delayTick) {
-                clock.tick(getNTime() - lastTick);
+        while (running) {
+            nowTime = getNTime();
+
+            bTime = nowTime;
+            time += bTime - aTime;
+            aTime = bTime;
+
+            if (nowTime - lastTick >= delayTick) {
+                clock.tick(nowTime - lastTick);
                 lastTick += delayTick;
             }
 
-            if (getNTime() - lastFrame >= delayFrame) {
-                clock.frame(getNTime() - lastFrame);
+            if (nowTime - lastFrame >= delayFrame) {
+                clock.frame(nowTime - lastFrame);
                 lastFrame += delayFrame;
             }
-
-            bTime = getNTime();
-            time += bTime - aTime;
-            aTime = bTime;
         }
     }
 

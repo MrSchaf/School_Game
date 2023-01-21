@@ -104,6 +104,8 @@ public class Clock {
         clockThread.stop();
         addNow("stop[" + stopped + "]");
         stopped++;
+
+        System.out.println(this);
     }
 
     public double getTime(){
@@ -205,7 +207,7 @@ public class Clock {
     }
 
     public String toString(){
-        String str = "Clock[(tps:" + tps + ") (tick:" + tick + ") (fps:" + fps + ") (frame:" + frame + ")]{\n";
+        String str = "Clock[(time:" + time + ") (tps:" + tps + ") (tick:" + tick + ") (fps:" + fps + ") (frame:" + frame + ")]{\n";
 
         for (Clock_Timer time: times.values()) {
             str += time + "\n";

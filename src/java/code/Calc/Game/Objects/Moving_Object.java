@@ -5,7 +5,7 @@ import code.Calc.Game.World.Coordinate;
 import code.Calc.Math.Math_Vector;
 import code.Calc.Game.World.World_Object;
 
-public class Moving_Object  extends World_Object {
+public class Moving_Object extends World_Object {
     private Math_Vector vel;
     private double delta;
 

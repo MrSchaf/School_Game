@@ -1,4 +1,4 @@
-package code.IO.InPut;
+package code.IO.InPut.In_Keyboard;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

@@ -1,6 +1,5 @@
 package code.IO.OutPut.Graphics.Panels;
 
-
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Image;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Image_Paint;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
@@ -15,7 +14,8 @@ public class Graphics_Panel {
 
     public Graphics_Panel(Resolution resolution) {
         size = resolution;
-        image = new Image(size);
+        image = new Image(size, "files/images/img.png");
+
         panel = new JPanel(){
           @Override
           public void paintComponent(Graphics g) {
@@ -23,6 +23,7 @@ public class Graphics_Panel {
               Image_Paint.paint(g, image.getImage(), size);
           }
         };
+
         panel.setSize(resolution.getWidth(), resolution.getHeight());
         paint();
     }

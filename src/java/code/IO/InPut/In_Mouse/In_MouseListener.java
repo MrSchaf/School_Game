@@ -1,4 +1,4 @@
-package code.IO.InPut;
+package code.IO.InPut.In_Mouse;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;

@@ -31,17 +31,16 @@ public class Game {
         Graphics_ContentPane g_cp = frame.getContentPane();
 
         Action_Listener actionListener = () -> {
-            System.out.println(clock.getTime("Tick"));
+            frame.frame();
         };
-
-        Action_ClockFrame action_clock = new Action_ClockFrame(actionListener, clock, "Tick", 0, 1, -1);
+        Action_ClockFrame action_clock = new Action_ClockFrame(actionListener, clock, "Frame", 0, 1, -1);
 
         clock.start();
     }
 
     private void initSeed(){
         seed = (int) (Math.random() * 1000000);
-        System.out.println("Seed: " + seed);
+//        System.out.println("Seed: " + seed);
     }
 
     private void initGame(){

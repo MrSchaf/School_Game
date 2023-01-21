@@ -10,26 +10,25 @@ import java.net.URL;
 
 public class Image {
     private BufferedImage image;
+    private String path;
     private Resolution resolution;
     private Coordinate middle;
 
-    public Image(Resolution resolution) {
+    public Image(Resolution resolution, String path) {
         this.resolution = resolution;
+        this.path = path;
 
         initImage();
     }
 
     private void initImage() {
         image = new BufferedImage(resolution.getWidth(), resolution.getHeight(), BufferedImage.TYPE_INT_RGB);
-        URL url = getClass().getClassLoader().getResource("files/images/img.png");
+        URL url = getClass().getClassLoader().getResource(path);
         BufferedImage input;
 
         try {
             input = ImageIO.read(url);
             Image_Paint.paint(image.getGraphics(), input, resolution);
-            URL imageURL = getClass().getClassLoader().getResource("files/images/Image.png");
-            File file = new File(imageURL.toURI());
-            ImageIO.write(image, "png", file);
 
         } catch (Exception e) {
             e.printStackTrace();
