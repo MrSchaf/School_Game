@@ -37,12 +37,12 @@ public class Clock_Thread implements Runnable {
 
             if (getNTime() - lastTick >= delayTick) {
                 clock.tick(getNTime() - lastTick);
-                lastTick = getNTime();
+                lastTick += delayTick;
             }
 
             if (getNTime() - lastFrame >= delayFrame) {
                 clock.frame(getNTime() - lastFrame);
-                lastFrame = getNTime();
+                lastFrame += delayFrame;
             }
 
             bTime = getNTime();
