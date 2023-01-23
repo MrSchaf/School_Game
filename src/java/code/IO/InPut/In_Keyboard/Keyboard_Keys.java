@@ -1,85 +1,111 @@
 package code.IO.InPut.In_Keyboard;
 
 import java.awt.event.KeyEvent;
+import java.util.Objects;
+import java.util.Vector;
 
 public class Keyboard_Keys {
-    public final static int A = KeyEvent.VK_A;
-    public final static int B = KeyEvent.VK_B;
-    public final static int C = KeyEvent.VK_C;
-    public final static int D = KeyEvent.VK_D;
-    public final static int E = KeyEvent.VK_E;
-    public final static int F = KeyEvent.VK_F;
-    public final static int G = KeyEvent.VK_G;
-    public final static int H = KeyEvent.VK_H;
-    public final static int I = KeyEvent.VK_I;
-    public final static int J = KeyEvent.VK_J;
-    public final static int K = KeyEvent.VK_K;
-    public final static int L = KeyEvent.VK_L;
-    public final static int M = KeyEvent.VK_M;
-    public final static int N = KeyEvent.VK_N;
-    public final static int O = KeyEvent.VK_O;
-    public final static int P = KeyEvent.VK_P;
-    public final static int Q = KeyEvent.VK_Q;
-    public final static int R = KeyEvent.VK_R;
-    public final static int S = KeyEvent.VK_S;
-    public final static int T = KeyEvent.VK_T;
-    public final static int U = KeyEvent.VK_U;
-    public final static int V = KeyEvent.VK_V;
-    public final static int W = KeyEvent.VK_W;
-    public final static int X = KeyEvent.VK_X;
-    public final static int Y = KeyEvent.VK_Y;
-    public final static int Z = KeyEvent.VK_Z;
-    public final static int ZERO = KeyEvent.VK_0;
-    public final static int ONE = KeyEvent.VK_1;
-    public final static int TWO = KeyEvent.VK_2;
-    public final static int THREE = KeyEvent.VK_3;
-    public final static int FOUR = KeyEvent.VK_4;
-    public final static int FIVE = KeyEvent.VK_5;
-    public final static int SIX = KeyEvent.VK_6;
-    public final static int SEVEN = KeyEvent.VK_7;
-    public final static int EIGHT = KeyEvent.VK_8;
-    public final static int NINE = KeyEvent.VK_9;
-    public final static int LEFT = KeyEvent.VK_LEFT;
-    public final static int RIGHT = KeyEvent.VK_RIGHT;
-    public final static int UP = KeyEvent.VK_UP;
-    public final static int DOWN = KeyEvent.VK_DOWN;
-    public final static int ENTER = KeyEvent.VK_ENTER;
-    public final static int SPACE = KeyEvent.VK_SPACE;
-    public final static int ESCAPE = KeyEvent.VK_ESCAPE;
-    public final static int LEFT_SHIFT = KeyEvent.VK_SHIFT;
-    public final static int RIGHT_SHIFT = KeyEvent.VK_SHIFT;
-    public final static int LEFT_CONTROL = KeyEvent.VK_CONTROL;
-    public final static int RIGHT_CONTROL = KeyEvent.VK_CONTROL;
-    public final static int ALT = KeyEvent.VK_ALT;
-    public final static int TAB = KeyEvent.VK_TAB;
-    public final static int BACKSPACE = KeyEvent.VK_BACK_SPACE;
-    public final static int DELETE = KeyEvent.VK_DELETE;
-    public final static int INSERT = KeyEvent.VK_INSERT;
-    public final static int HOME = KeyEvent.VK_HOME;
-    public final static int END = KeyEvent.VK_END;
-    public final static int PAGE_UP = KeyEvent.VK_PAGE_UP;
-    public final static int PAGE_DOWN = KeyEvent.VK_PAGE_DOWN;
-    public final static int MINUS = KeyEvent.VK_MINUS;
-    public final static int PLUS = KeyEvent.VK_PLUS;
-    public final static int PERIOD = KeyEvent.VK_PERIOD;
-    public final static int COMMA = KeyEvent.VK_COMMA;
-    public final static int BACK_QUOTE = KeyEvent.VK_BACK_QUOTE;
-    public final static int HASHTAG = KeyEvent.VK_NUMBER_SIGN;
-    public final static int F1 = KeyEvent.VK_F1;
-    public final static int F2 = KeyEvent.VK_F2;
-    public final static int F3 = KeyEvent.VK_F3;
-    public final static int F4 = KeyEvent.VK_F4;
-    public final static int F5 = KeyEvent.VK_F5;
-    public final static int F6 = KeyEvent.VK_F6;
-    public final static int F7 = KeyEvent.VK_F7;
-    public final static int F8 = KeyEvent.VK_F8;
-    public final static int F9 = KeyEvent.VK_F9;
-    public final static int F10 = KeyEvent.VK_F10;
-    public final static int F11 = KeyEvent.VK_F11;
-    public final static int F12 = KeyEvent.VK_F12;
-    public final static int F13 = KeyEvent.VK_F13;
-    public final static int F14 = KeyEvent.VK_F14;
-    public final static int F15 = KeyEvent.VK_F15;
-    public final static int F16 = KeyEvent.VK_F16;
+        public final static Keyboard_Key Key_A = new Keyboard_Key(KeyEvent.VK_A, "A");
+        public final static Keyboard_Key Key_B = new Keyboard_Key(KeyEvent.VK_B, "B");
+        public final static Keyboard_Key Key_C = new Keyboard_Key(KeyEvent.VK_C, "C");
+        public final static Keyboard_Key Key_D = new Keyboard_Key(KeyEvent.VK_D, "D");
+        public final static Keyboard_Key Key_E = new Keyboard_Key(KeyEvent.VK_E, "E");
+        public final static Keyboard_Key Key_F = new Keyboard_Key(KeyEvent.VK_F, "F");
+        public final static Keyboard_Key Key_G = new Keyboard_Key(KeyEvent.VK_G, "G");
+        public final static Keyboard_Key Key_H = new Keyboard_Key(KeyEvent.VK_H, "H");
+        public final static Keyboard_Key Key_I = new Keyboard_Key(KeyEvent.VK_I, "I");
+        public final static Keyboard_Key Key_J = new Keyboard_Key(KeyEvent.VK_J, "J");
+        public final static Keyboard_Key Key_K = new Keyboard_Key(KeyEvent.VK_K, "K");
+        public final static Keyboard_Key Key_L = new Keyboard_Key(KeyEvent.VK_L, "L");
+        public final static Keyboard_Key Key_M = new Keyboard_Key(KeyEvent.VK_M, "M");
+        public final static Keyboard_Key Key_N = new Keyboard_Key(KeyEvent.VK_N, "N");
+        public final static Keyboard_Key Key_O = new Keyboard_Key(KeyEvent.VK_O, "O");
+        public final static Keyboard_Key Key_P = new Keyboard_Key(KeyEvent.VK_P, "P");
+        public final static Keyboard_Key Key_Q = new Keyboard_Key(KeyEvent.VK_Q, "Q");
+        public final static Keyboard_Key Key_R = new Keyboard_Key(KeyEvent.VK_R, "R");
+        public final static Keyboard_Key Key_S = new Keyboard_Key(KeyEvent.VK_S, "S");
+        public final static Keyboard_Key Key_T = new Keyboard_Key(KeyEvent.VK_T, "T");
+        public final static Keyboard_Key Key_U = new Keyboard_Key(KeyEvent.VK_U, "U");
+        public final static Keyboard_Key Key_V = new Keyboard_Key(KeyEvent.VK_V, "V");
+        public final static Keyboard_Key Key_W = new Keyboard_Key(KeyEvent.VK_W, "W");
+        public final static Keyboard_Key Key_X = new Keyboard_Key(KeyEvent.VK_X, "X");
+        public final static Keyboard_Key Key_Y = new Keyboard_Key(KeyEvent.VK_Y, "Y");
+        public final static Keyboard_Key Key_Z = new Keyboard_Key(KeyEvent.VK_Z, "Z");
+        public final static Keyboard_Key Key_0 = new Keyboard_Key(KeyEvent.VK_0, "0");
+        public final static Keyboard_Key Key_1 = new Keyboard_Key(KeyEvent.VK_1, "1");
+        public final static Keyboard_Key Key_2 = new Keyboard_Key(KeyEvent.VK_2, "2");
+        public final static Keyboard_Key Key_3 = new Keyboard_Key(KeyEvent.VK_3, "3");
+        public final static Keyboard_Key Key_4 = new Keyboard_Key(KeyEvent.VK_4, "4");
+        public final static Keyboard_Key Key_5 = new Keyboard_Key(KeyEvent.VK_5, "5");
+        public final static Keyboard_Key Key_6 = new Keyboard_Key(KeyEvent.VK_6, "6");
+        public final static Keyboard_Key Key_7 = new Keyboard_Key(KeyEvent.VK_7, "7");
+        public final static Keyboard_Key Key_8 = new Keyboard_Key(KeyEvent.VK_8, "8");
+        public final static Keyboard_Key Key_9 = new Keyboard_Key(KeyEvent.VK_9, "9");
+        public final static Keyboard_Key Key_Space = new Keyboard_Key(KeyEvent.VK_SPACE, "Space");
+        public final static Keyboard_Key Key_Shift = new Keyboard_Key(KeyEvent.VK_SHIFT, "Shift");
+        public final static Keyboard_Key Key_Control = new Keyboard_Key(KeyEvent.VK_CONTROL, "Control");
+        public final static Keyboard_Key Key_Alt = new Keyboard_Key(KeyEvent.VK_ALT, "Alt");
+        public final static Keyboard_Key Key_Up = new Keyboard_Key(KeyEvent.VK_UP, "Up");
+        public final static Keyboard_Key Key_Down = new Keyboard_Key(KeyEvent.VK_DOWN, "Down");
+        public final static Keyboard_Key Key_Left = new Keyboard_Key(KeyEvent.VK_LEFT, "Left");
+        public final static Keyboard_Key Key_Right = new Keyboard_Key(KeyEvent.VK_RIGHT, "Right");
+        public final static Keyboard_Key Key_Enter = new Keyboard_Key(KeyEvent.VK_ENTER, "Enter");
+        public final static Keyboard_Key Key_Escape = new Keyboard_Key(KeyEvent.VK_ESCAPE, "Escape");
+        public final static Keyboard_Key Key_Backspace = new Keyboard_Key(KeyEvent.VK_BACK_SPACE, "Backspace");
+        public final static Keyboard_Key Key_Tap = new Keyboard_Key(KeyEvent.VK_TAB, "Tab");
+        public final static Keyboard_Key Key_F1 = new Keyboard_Key(KeyEvent.VK_F1, "F1");
+        public final static Keyboard_Key Key_F2 = new Keyboard_Key(KeyEvent.VK_F2, "F2");
+        public final static Keyboard_Key Key_F3 = new Keyboard_Key(KeyEvent.VK_F3, "F3");
+        public final static Keyboard_Key Key_F4 = new Keyboard_Key(KeyEvent.VK_F4, "F4");
+        public final static Keyboard_Key Key_F5 = new Keyboard_Key(KeyEvent.VK_F5, "F5");
+        public final static Keyboard_Key Key_F6 = new Keyboard_Key(KeyEvent.VK_F6, "F6");
+        public final static Keyboard_Key Key_F7 = new Keyboard_Key(KeyEvent.VK_F7, "F7");
+        public final static Keyboard_Key Key_F8 = new Keyboard_Key(KeyEvent.VK_F8, "F8");
+        public final static Keyboard_Key Key_F9 = new Keyboard_Key(KeyEvent.VK_F9, "F9");
+        public final static Keyboard_Key Key_F10 = new Keyboard_Key(KeyEvent.VK_F10, "F10");
+        public final static Keyboard_Key Key_F11 = new Keyboard_Key(KeyEvent.VK_F11, "F11");
+        public final static Keyboard_Key Key_F12 = new Keyboard_Key(KeyEvent.VK_F12, "F12");
+        public final static Keyboard_Key Key_F13 = new Keyboard_Key(KeyEvent.VK_F13, "F13");
+        public final static Keyboard_Key Key_F14 = new Keyboard_Key(KeyEvent.VK_F14, "F14");
+        public final static Keyboard_Key Key_F15 = new Keyboard_Key(KeyEvent.VK_F15, "F15");
+        public final static Keyboard_Key Key_F16 = new Keyboard_Key(KeyEvent.VK_F16, "F16");
 
+    private final static Keyboard_Key[] keys = {
+        Key_A, Key_B, Key_C, Key_D, Key_E, Key_F, Key_G, Key_H, Key_I, Key_J, Key_K, Key_L, Key_M, Key_N, Key_O, Key_P, Key_Q, Key_R, Key_S, Key_T, Key_U, Key_V, Key_W, Key_X, Key_Y, Key_Z,
+        Key_0, Key_1, Key_2, Key_3, Key_4, Key_5, Key_6, Key_7, Key_8, Key_9,
+        Key_Space, Key_Shift, Key_Control, Key_Alt, Key_Up, Key_Down, Key_Left, Key_Right, Key_Enter, Key_Escape, Key_Backspace, Key_Tap,
+        Key_F1, Key_F2, Key_F3, Key_F4, Key_F5, Key_F6, Key_F7, Key_F8, Key_F9, Key_F10, Key_F11, Key_F12, Key_F13, Key_F14, Key_F15, Key_F16
+    };
+
+    public static Keyboard_Key getKey(int keyCode) {
+        for (Keyboard_Key key : keys) {
+            if (key.getCode() == keyCode) {
+                return key;
+            }
+        }
+        return null;
+    }
+
+    public static Keyboard_Key getKey(String keyName) {
+        for (Keyboard_Key key : keys) {
+            if (key.getName().equals(keyName)) {
+                return key;
+            }
+        }
+        return null;
+    }
+
+    public static Vector<Keyboard_Key> getPressedKeys() {
+        Vector<Keyboard_Key> keyList = new Vector<Keyboard_Key>();
+        for (Keyboard_Key key : keys) {
+            if(key.isPressed()){
+                keyList.add(key);
+            }
+        }
+        return keyList;
+    }
+
+    public static void setPressedKey(boolean pressed, int keyCode){
+        Objects.requireNonNull(getKey(keyCode)).setPressed(pressed);
+    }
 }
