@@ -41,6 +41,7 @@ public class Graphics_Frame {
 
     public void frame(){
         setSize(new Resolution(frame.getWidth(), frame.getHeight()));
+        System.out.println("Frame: " + frame.getWidth() + " " + frame.getHeight());
         contentPane.paint();
         frame.repaint();
 

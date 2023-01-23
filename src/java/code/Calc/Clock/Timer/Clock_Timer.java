@@ -58,7 +58,7 @@ public class Clock_Timer {
 
     public void action() {
         if (action != null) {
-            action.action();
+            action.action(0);
         }
     }
 

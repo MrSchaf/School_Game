@@ -156,16 +156,16 @@ public class Clock {
         put(new Clock_Timer(this, name, time, tick, frame));
     }
 
-    public void addTimer_Time(String name, double time, Action_ClockTime action, double repeatTime, int repeat){
-        put(new Clock_Timer_Time(this, name, action, time, repeatTime, repeat));
+    public void addTimer_Time(String name, Action_ClockTime action, double repeatTime, int repeat){
+        put(new Clock_Timer_Time(this, name, action, repeatTime, repeat));
     }
 
-    public void addTimer_Tick(String name, int tick, Action_ClockTick action, int repeat, int repeatTick){
-        put(new Clock_Timer_Tick(this, name, action, tick, repeat, repeatTick));
+    public void addTimer_Tick(String name, Action_ClockTick action, int repeatTick, int repeat){
+        put(new Clock_Timer_Tick(this, name, action, repeatTick, repeat));
     }
 
-    public void addTimer_Frame(String name, int tick, Action_ClockFrame action, int repeat, int repeatFrame){
-        put(new Clock_Timer_Frame(this, name, action, tick, repeat, repeatFrame));
+    public void addTimer_Frame(String name, Action_ClockFrame action, int repeatFrame, int repeat){
+        put(new Clock_Timer_Frame(this, name, action, repeatFrame, repeat));
     }
 
     public void addTimer(Clock_Timer clockTime){

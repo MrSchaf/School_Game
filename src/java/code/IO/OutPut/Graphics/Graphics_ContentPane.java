@@ -24,6 +24,7 @@ public class Graphics_ContentPane {
     }
 
     public void paint(){
+        System.out.println("Panel: " + currentPanel.getSize().getWidth() + " " + currentPanel.getSize().getHeight());
         currentPanel.paint();
         contentPane.repaint();
     }

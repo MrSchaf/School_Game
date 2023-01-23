@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Action {
-    private final List<Action_Listener> listeners = new ArrayList<>();
+    protected final List<Action_Listener> listeners = new ArrayList<>();
 
-    public Action() {}
+    public Action(){}
 
     public Action(Action_Listener listener) {
         listeners.add(listener);
@@ -24,9 +24,9 @@ public abstract class Action {
         listeners.remove(listener);
     }
 
-    public void action(){
+    public void action(int code){
         for (Action_Listener listener : listeners) {
-            listener.actionPerformed();
+            listener.actionPerformed(code);
         }
     }
 }

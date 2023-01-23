@@ -26,10 +26,11 @@ public class Game {
 
         Graphics_ContentPane g_cp = frame.getContentPane();
 
-        Action_Listener actionListener = () -> {
+        Action_Listener actionListener = (int code) -> {
             frame.frame();
         };
-        Action_ClockFrame action_clock = new Action_ClockFrame(actionListener, clock, "Frame", 0, 1, -1);
+
+        Action_ClockFrame action_clock = new Action_ClockFrame(actionListener, clock, "Frame", 1, -1);
 
         clock.start();
     }

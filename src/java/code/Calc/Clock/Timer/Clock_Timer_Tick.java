@@ -15,10 +15,10 @@ public class Clock_Timer_Tick extends Clock_Timer{
      * <p><strong>repeat = x > 0</strong><br/>repeats x times</p>
      */
 
-    public Clock_Timer_Tick(Clock clock, String name, Action_ClockTick action, int tick, int TickDelay, int repeat) {
-        super(clock, name, -1, tick, -1);
+    public Clock_Timer_Tick(Clock clock, String name, Action_ClockTick action, int tickDelay, int repeat) {
+        super(clock, name, -1, clock.getTick() + tickDelay, -1);
         setAction(action);
-        this.tickDelay = TickDelay;
+        this.tickDelay = tickDelay;
         this.tickLeft = (tick - clock.getTick());
         this.repeat = repeat;
     }

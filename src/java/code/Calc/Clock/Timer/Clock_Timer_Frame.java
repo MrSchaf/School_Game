@@ -15,8 +15,8 @@ public class Clock_Timer_Frame extends Clock_Timer {
      * <p><strong>repeat = x > 0</strong><br/>repeats x times</p>
      */
 
-    public Clock_Timer_Frame(Clock clock, String name, Action_ClockFrame action, int frame, int frameDelay, int repeat) {
-        super(clock, name, -1, -1, frame);
+    public Clock_Timer_Frame(Clock clock, String name, Action_ClockFrame action, int frameDelay, int repeat) {
+        super(clock, name, -1, -1, clock.getFrame() + frameDelay);
         setAction(action);
         this.frameDelay = frameDelay;
         this.frameLeft = (frame - clock.getFrame());

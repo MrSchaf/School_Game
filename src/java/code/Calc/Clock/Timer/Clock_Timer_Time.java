@@ -15,8 +15,8 @@ public class Clock_Timer_Time extends Clock_Timer {
      * <p><strong>repeat = x > 0</strong><br/>repeats x times</p>
      */
 
-    public Clock_Timer_Time(Clock clock, String name, Action_ClockTime action, double time, double timeDelay, int repeat) {
-        super(clock, name, time, -1, -1);
+    public Clock_Timer_Time(Clock clock, String name, Action_ClockTime action, double timeDelay, int repeat) {
+        super(clock, name, clock.getTime() + timeDelay, -1, -1);
         setAction(action);
         this.timeDelay = timeDelay;
         this.timeLeft = (time - clock.getTime());
