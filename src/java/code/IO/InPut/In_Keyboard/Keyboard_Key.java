@@ -6,14 +6,14 @@ import code.Calc.Actions.In.Keyboard.Action_Key;
 public class Keyboard_Key {
     private final int code;
     private final String name;
+    private final Action_Key action;
     private boolean pressed;
-    private Action_Key action;
 
     public Keyboard_Key(int code, String name){
         this.code = code;
         this.name = name;
         pressed = false;
-        action = new Action_Key(this);
+        action = new Action_Key();
     }
 
     public int getCode(){
@@ -34,5 +34,17 @@ public class Keyboard_Key {
 
     public void addActionListener(Action_Listener listener){
         action.addActionListener(listener);
+    }
+
+    public void removeActionListener(Action_Listener listener){
+        action.removeActionListener(listener);
+    }
+
+    public void keyPressed(){
+        action.keyPressed();
+    }
+
+    public void keyReleased(){
+        action.keyReleased();
     }
 }

@@ -1,5 +1,7 @@
 package code.IO.InPut.In_Keyboard;
 
+import code.Calc.Actions.Action_Listener;
+
 import java.awt.event.KeyEvent;
 import java.util.Objects;
 import java.util.Vector;
@@ -77,7 +79,7 @@ public class Keyboard_Keys {
         Key_F1, Key_F2, Key_F3, Key_F4, Key_F5, Key_F6, Key_F7, Key_F8, Key_F9, Key_F10, Key_F11, Key_F12, Key_F13, Key_F14, Key_F15, Key_F16
     };
 
-    private Vector<Keyboard_Key> pressedKeys = new Vector<Keyboard_Key>();
+    private static final Vector<Keyboard_Key> pressedKeys = new Vector<>();
 
     public static Keyboard_Key getKey(int keyCode) {
         for (Keyboard_Key key : keys) {
@@ -97,29 +99,64 @@ public class Keyboard_Keys {
         return null;
     }
 
-    public static void getPressedKeys() {
-        for (int i = 0; i < keys.length; i++) {
-
+    public static Keyboard_Key getKey(Keyboard_Key key) {
+        for (Keyboard_Key k : keys) {
+            if (k.equals(key)) {
+                return k;
+            }
         }
+        return null;
     }
 
     public void tick(){
         for(Keyboard_Key key : pressedKeys){
-
+            key.keyPressed();
+            if(!key.isPressed()){
+                removePressedKey(key);
+            }
         }
     }
 
     public static void setPressedKey(boolean pressed, int keyCode){
         Objects.requireNonNull(getKey(keyCode)).setPressed(pressed);
+        if(pressed) {
+            addPressedKey(getKey(keyCode));
+        } else {
+            removePressedKey(getKey(keyCode));
+        }
     }
 
-    private void addPressedKey(Keyboard_Key key){
+    private static void addPressedKey(Keyboard_Key key){
         if(!pressedKeys.contains(key)){
             pressedKeys.add(key);
         }
     }
 
-    private void removePressedKey(Keyboard_Key key){
+    private static void removePressedKey(Keyboard_Key key){
         pressedKeys.remove(key);
+    }
+
+    public static void addKeyListener(Action_Listener listener, Keyboard_Key key){
+        getKey(key).addActionListener(listener);
+    }
+
+    public static void removeKeyListener(Action_Listener listener, Keyboard_Key key){
+        getKey(key).removeActionListener(listener);
+    }
+
+    public static void addKeyListener(Action_Listener listener, String keyName){
+        getKey(keyName).addActionListener(listener);
+    }
+
+    public static void removeKeyListener(Action_Listener listener, String keyName){
+        getKey(keyName).removeActionListener(listener);
+    }
+
+    public static void addKeyListener(Action_Listener listener, int keyCode){
+        getKey(keyCode).addActionListener(listener);
+    }
+
+    public static void removeKeyListener(Action_Listener listener, int keyCode){
+        getKey(keyCode).removeActionListener(listener);
     }
 }

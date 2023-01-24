@@ -55,6 +55,5 @@ public class Game {
     private void initOutput(){
         out = new Out();
         frame = new Graphics_Frame(Resolution.RES_720p, "Game");
-
     }
 }
