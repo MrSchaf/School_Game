@@ -2,6 +2,7 @@ package code.Calc.Actions.In.Keyboard;
 
 import code.Calc.Actions.Action;
 import code.Calc.Actions.Action_Listener;
+import code.IO.InPut.In_Keyboard.Keyboard_Key;
 
 import java.util.List;
 
@@ -24,6 +25,10 @@ public class Action_Key extends Action {
         super(listeners);
         this.code = code;
         this.name = name;
+    }
+
+    public Action_Key(Keyboard_Key key){
+        this(key.getCode(), key.getName());
     }
 
     public int getCode(){
