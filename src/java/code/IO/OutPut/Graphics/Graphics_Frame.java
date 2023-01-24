@@ -1,5 +1,7 @@
 package code.IO.OutPut.Graphics;
 
+import code.Calc.Game.World.World;
+import code.Game;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Graphics.Panels.Game_Panel;
 import code.IO.OutPut.Graphics.Panels.Menu_Panel;
@@ -10,12 +12,14 @@ public class Graphics_Frame {
     private JFrame frame;
     private Resolution size;
     private String title;
+    private World world;
 
     private Graphics_ContentPane contentPane;
 
-    public Graphics_Frame(Resolution resolution, String title) {
+    public Graphics_Frame(Resolution resolution, String title, World world){
         size = resolution;
         this.title = title;
+        this.world = world;
 
         initFrame();
         initPanel();
@@ -32,7 +36,7 @@ public class Graphics_Frame {
 
     private void initPanel(){
         contentPane = new Graphics_ContentPane(this.frame, size);
-        contentPane.addPanel("Game", new Game_Panel(size));
+        contentPane.addPanel("Game", new Game_Panel(size, world));
         contentPane.addPanel("Menu", new Menu_Panel(size));
         contentPane.setCurrentPanel("Menu");
 

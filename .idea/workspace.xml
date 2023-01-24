@@ -4,17 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="634dafc7-3435-4fb1-a34a-a7b79a9c55f0" name="Changes" comment="Added key actions">
+    <list default="true" id="634dafc7-3435-4fb1-a34a-a7b79a9c55f0" name="Changes" comment="Finished key actions">
+      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/calc/Clock/Clock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/calc/Clock/Clock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,6 +35,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Kk6gTBv2oBvzgsXyZmd71Q9s6s" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -31,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/morit/IdeaProjects/Projects/S031_Prototyp",
+    "last_opened_file_path": "C:/Users/morit/IdeaProjects/Projects/S030_TempConverter",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -61,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674506348552</updated>
       <workItem from="1674506348554" duration="128000" />
-      <workItem from="1674566907775" duration="645000" />
+      <workItem from="1674566907775" duration="6024000" />
     </task>
     <task id="LOCAL-00001" summary="Added key actions">
       <created>1674559959290</created>
@@ -77,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674559973411</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished key actions">
+      <created>1674568381417</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674568381417</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added key actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added key actions" />
+    <MESSAGE value="Finished key actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished key actions" />
   </component>
 </project>

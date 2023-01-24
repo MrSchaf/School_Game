@@ -3,6 +3,9 @@ package code;
 import code.Calc.Actions.Action_Listener;
 import code.Calc.Actions.Clock.Action_ClockFrame;
 import code.Calc.Clock.Clock;
+import code.Calc.Game.World.Generation.Generation;
+import code.Calc.Game.World.Generation.Generation_NoGen;
+import code.Calc.Game.World.World;
 import code.IO.InPut.In;
 import code.IO.OutPut.Graphics.Graphics_ContentPane;
 import code.IO.OutPut.Graphics.Graphics_Frame;
@@ -13,6 +16,7 @@ public class Game {
     private Clock clock;
     private Out out;
     private In in;
+    private World world;
 
     private Graphics_Frame frame;
 
@@ -21,6 +25,9 @@ public class Game {
     public Game() {
         initSeed();
         initClock(100, 60);
+        int chunkSize = 16;
+        int tileSize_Ratio = 1;
+        initCalc(chunkSize, tileSize_Ratio, new Generation_NoGen(chunkSize * tileSize_Ratio));
         initInput();
         initOutput();
 
@@ -40,8 +47,8 @@ public class Game {
 //        System.out.println("Seed: " + seed);
     }
 
-    private void initGame(){
-
+    private void initCalc(int chunckSize, int tileSize_Ratio, Generation generation){
+        world = new World(seed, chunckSize, tileSize_Ratio, generation);
     }
 
     private void initClock(int tps, int fps){
@@ -54,6 +61,6 @@ public class Game {
 
     private void initOutput(){
         out = new Out();
-        frame = new Graphics_Frame(Resolution.RES_720p, "Game");
+        frame = new Graphics_Frame(Resolution.RES_720p, "Game", world);
     }
 }
