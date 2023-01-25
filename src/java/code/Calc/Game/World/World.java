@@ -1,6 +1,5 @@
 package code.Calc.Game.World;
 
-
 import code.Calc.Game.Objects.Object;
 import code.Calc.Game.World.Generation.Generation;
 
@@ -10,15 +9,17 @@ import java.util.Vector;
 public class World {
     private final int seed;
     private final int chunkSize;
+    private final int tileSize;
 
-    private Generation generation;
+    private final Generation generation;
 
     private Hashtable<String, Object> entities;
     private Hashtable<Coordinate, World_Chunk> chunks;
 
-    public World(int seed, int chunkSize, Generation generation) {
+    public World(int seed, int chunkSize, int tileSize_Ratio, Generation generation) {
         this.seed = seed;
         this.chunkSize = chunkSize;
+        this.tileSize = tileSize_Ratio;
         this.generation = generation;
     }
 

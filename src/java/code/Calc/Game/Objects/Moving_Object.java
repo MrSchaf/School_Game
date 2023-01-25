@@ -15,8 +15,10 @@ public class Moving_Object extends World_Object {
 
     public void move(double delta) {
         this.delta = delta;
-        coordinate.setX((int)(coordinate.getX() + (Math.round(vel.getX() * this.delta))));
-        coordinate.setY((int)(coordinate.getY() + (Math.round(vel.getY() * this.delta))));
+        Coordinate newCoords = getCoordinate();
+
+        newCoords.setX((int)(coordinate.getX() + (Math.round(vel.getX() * this.delta))));
+        newCoords.setY((int)(coordinate.getY() + (Math.round(vel.getY() * this.delta))));
     }
 
     public Math_Vector getVel() {

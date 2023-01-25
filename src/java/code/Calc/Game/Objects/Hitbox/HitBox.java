@@ -2,12 +2,19 @@ package code.Calc.Game.Objects.Hitbox;
 
 import code.Calc.Game.World.Coordinate;
 
+import java.awt.*;
+
 public class HitBox {
     private boolean[][] hitBox;
     Coordinate reference;
 
     public HitBox(boolean[][] hitBox, Coordinate reference){
         this.hitBox = hitBox;
+        this.reference = reference;
+    }
+
+    public HitBox(Rectangle rectangle, Coordinate reference){
+        this.hitBox = new boolean[rectangle.width][rectangle.height];
         this.reference = reference;
     }
 
