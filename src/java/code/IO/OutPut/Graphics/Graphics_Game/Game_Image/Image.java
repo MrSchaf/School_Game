@@ -11,7 +11,6 @@ public class Image {
     private BufferedImage image;
     private final String path;
     private Resolution resolution;
-    private Coordinate middle;
 
     public Image(Resolution resolution, String path) {
         this.resolution = resolution;
