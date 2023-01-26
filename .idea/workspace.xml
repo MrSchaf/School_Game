@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="634dafc7-3435-4fb1-a34a-a7b79a9c55f0" name="Changes" comment="Started to implement World displaying">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Tick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Tick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
-    </list>
+    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="finished up clock and started to implement keylistener" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,28 +20,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Kk6gTBv2oBvzgsXyZmd71Q9s6s" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2KdHLPARKdaLsXSOpX2BMrPZRto" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/morit/IdeaProjects/Projects/S030_TempConverter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -74,53 +59,55 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="634dafc7-3435-4fb1-a34a-a7b79a9c55f0" name="Changes" comment="Added key actions" />
-      <created>1674506348552</created>
+      <changelist id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="" />
+      <created>1674297483688</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1674506348552</updated>
-      <workItem from="1674506348554" duration="128000" />
-      <workItem from="1674566907775" duration="6227000" />
-      <workItem from="1674723019352" duration="2670000" />
+      <updated>1674297483688</updated>
+      <workItem from="1674297486179" duration="182000" />
+      <workItem from="1674297678629" duration="5348000" />
     </task>
-    <task id="LOCAL-00001" summary="Added key actions">
-      <created>1674559959290</created>
+    <task id="LOCAL-00001" summary="fixed Clock timing">
+      <created>1674298948197</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1674559959290</updated>
+      <updated>1674298948197</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added key actions">
-      <created>1674559973411</created>
+    <task id="LOCAL-00002" summary="finished up clock and started to implement keylistener">
+      <created>1674304826809</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1674559973411</updated>
+      <updated>1674304826809</updated>
     </task>
-    <task id="LOCAL-00003" summary="Finished key actions">
-      <created>1674568381417</created>
+    <task id="LOCAL-00003" summary="finished up clock and started to implement keylistener">
+      <created>1674304905765</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1674568381417</updated>
+      <updated>1674304905765</updated>
     </task>
-    <task id="LOCAL-00004" summary="Started to implement World displaying">
-      <created>1674573161341</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1674573161341</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added key actions" />
-    <MESSAGE value="Finished key actions" />
-    <MESSAGE value="Started to implement World displaying" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to implement World displaying" />
+    <MESSAGE value="fixed Clock timing" />
+    <MESSAGE value="finished up clock and started to implement keylistener" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished up clock and started to implement keylistener" />
   </component>
 </project>
