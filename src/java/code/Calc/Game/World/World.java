@@ -5,6 +5,7 @@ import code.Calc.Game.World.Generation.Generation;
 
 import java.util.Hashtable;
 import java.util.Vector;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class World {
     private final int seed;
@@ -96,5 +97,19 @@ public class World {
         if(!chunks.containsKey(coordinate)){
             chunks.put(coordinate, chunk);
         }
+    }
+
+    public boolean intersects(Object object) {
+        AtomicBoolean intersects = new AtomicBoolean(false);
+        for (int i = 0; i < chunks.size(); i++) {
+            chunks.forEach((coordinate, chunk) -> {
+                for (int j = 0; j < chunk.getTiles().length; j++) {
+                    if (chunk.intersects(object)) {
+                        intersects.set(true);
+                    }
+                }
+            });
+        }
+        return intersects.get();
     }
 }

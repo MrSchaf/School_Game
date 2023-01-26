@@ -7,27 +7,32 @@ public abstract class Object {
     protected Coordinate coordinate;
     private final HitBox hitBox;
     protected double rotation;
-    private boolean solid;
     private int image;
 
-    public Object(int x, int y,HitBox hitBox, double rotation, boolean solid, int image) {
+    public Object(int x, int y,HitBox hitBox, double rotation, int image) {
         coordinate = new Coordinate(x, y);
         this.hitBox = hitBox;
         this.rotation = rotation;
-        this.solid = solid;
         this.image = image;
     }
 
-    public Object(Coordinate coordinate,HitBox hitBox, double rotation, boolean solid, int image) {
+    public Object(Coordinate coordinate,HitBox hitBox, double rotation, int image) {
         this.coordinate = coordinate;
         this.hitBox = hitBox;
         this.rotation = rotation;
-        this.solid = solid;
         this.image = image;
     }
 
     public boolean intersects(Coordinate x, Coordinate y){
         return hitBox.intersects(x, y);
+    }
+
+    public boolean intersects(Object object){
+        return hitBox.intersects(object.getHitBox());
+    }
+
+    private HitBox getHitBox() {
+        return this.hitBox;
     }
 
     public double getX() {
@@ -42,10 +47,6 @@ public abstract class Object {
         return coordinate;
     }
 
-    public boolean isSolid() {
-        return solid;
-    }
-
     public int getImage(){
         return image;
     }
@@ -56,10 +57,6 @@ public abstract class Object {
 
     public void setY(int y) {
         coordinate.setY(y);
-    }
-
-    public void setSolid(boolean solid) {
-        this.solid = solid;
     }
 
     public void setImage(int image){

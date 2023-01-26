@@ -33,11 +33,12 @@ public class Clock_Timer_Time extends Clock_Timer {
             check = true;
             setTimer();
             repeated++;
-            this.action();
 
             if(repeat > 0){
+                this.action(0);
                 repeat--;
                 if(repeat == 0){
+                    this.action(1);
                     clock.removeTimer(this);
                 }
             }

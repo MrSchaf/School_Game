@@ -13,5 +13,6 @@ public class Game_Panel extends Graphics_Panel {
        super(resolution);
        panel.setBackground(Color.BLUE);
        worldObjects = new World_Display_Objects(resolution, 1, world);
+
    }
 }

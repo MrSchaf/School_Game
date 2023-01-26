@@ -1,6 +1,7 @@
 package code.Calc.Game.World;
 
-import java.util.ArrayList;
+import code.Calc.Game.Objects.Hitbox.HitBox;
+import code.Calc.Game.Objects.Object;
 
 public class World_Chunk {
     private Coordinate coordinate;
@@ -78,5 +79,14 @@ public class World_Chunk {
 
     public void setObject(Coordinate coordinate, World_Tile tile) {
         tiles[coordinate.getX() + coordinate.getY() * width] = tile;
+    }
+
+    public boolean intersects(Object object) {
+        for (World_Tile tile : tiles) {
+            if (tile != null && tile.intersects(object)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

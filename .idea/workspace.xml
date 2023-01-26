@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="634dafc7-3435-4fb1-a34a-a7b79a9c55f0" name="Changes" comment="Finished key actions">
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
+    <list default="true" id="634dafc7-3435-4fb1-a34a-a7b79a9c55f0" name="Changes" comment="Started to implement World displaying">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Tick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Tick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Timer/Clock_Timer_Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Hitbox/HitBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
     </list>
@@ -41,18 +45,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/morit/IdeaProjects/Projects/S030_TempConverter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/morit/IdeaProjects/Projects/S030_TempConverter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -76,7 +80,8 @@
       <option name="presentableId" value="Default" />
       <updated>1674506348552</updated>
       <workItem from="1674506348554" duration="128000" />
-      <workItem from="1674566907775" duration="6024000" />
+      <workItem from="1674566907775" duration="6227000" />
+      <workItem from="1674723019352" duration="2670000" />
     </task>
     <task id="LOCAL-00001" summary="Added key actions">
       <created>1674559959290</created>
@@ -99,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674568381417</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Started to implement World displaying">
+      <created>1674573161341</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674573161341</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added key actions" />
     <MESSAGE value="Finished key actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished key actions" />
+    <MESSAGE value="Started to implement World displaying" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to implement World displaying" />
   </component>
 </project>

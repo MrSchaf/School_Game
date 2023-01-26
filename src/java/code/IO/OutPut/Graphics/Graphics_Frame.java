@@ -1,7 +1,6 @@
 package code.IO.OutPut.Graphics;
 
 import code.Calc.Game.World.World;
-import code.Game;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Graphics.Panels.Game_Panel;
 import code.IO.OutPut.Graphics.Panels.Menu_Panel;
@@ -12,7 +11,7 @@ public class Graphics_Frame {
     private JFrame frame;
     private Resolution size;
     private String title;
-    private World world;
+    private final World world;
 
     private Graphics_ContentPane contentPane;
 

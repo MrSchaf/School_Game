@@ -7,13 +7,14 @@ import java.awt.*;
 public class HitBox {
     private boolean[][] hitBox;
     Coordinate reference;
+    int height;
 
-    public HitBox(boolean[][] hitBox, Coordinate reference){
+    public HitBox(boolean[][] hitBox, Coordinate reference, int height){
         this.hitBox = hitBox;
         this.reference = reference;
     }
 
-    public HitBox(Rectangle rectangle, Coordinate reference){
+    public HitBox(Rectangle rectangle, Coordinate reference, int height){
         this.hitBox = new boolean[rectangle.width][rectangle.height];
         this.reference = reference;
     }

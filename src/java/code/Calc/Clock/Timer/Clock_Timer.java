@@ -56,9 +56,9 @@ public class Clock_Timer {
         return false;
     }
 
-    public void action() {
+    public void action(int code) {
         if (action != null) {
-            action.action(0);
+            action.action(code);
         }
     }
 

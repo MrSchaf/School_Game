@@ -9,7 +9,7 @@ public class Floor_Tile extends Object{
     private int height;
 
     public Floor_Tile(Coordinate coordinate, int tileSize_Ratio, int height) {
-        super(coordinate, new HitBox(new Rectangle(tileSize_Ratio, tileSize_Ratio), coordinate), 0, true, 0);
+        super(coordinate, new HitBox(new Rectangle(tileSize_Ratio, tileSize_Ratio), coordinate, height), 0,  0);
         this.height = height;
     }
 
