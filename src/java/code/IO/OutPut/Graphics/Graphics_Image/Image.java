@@ -1,6 +1,6 @@
-package code.IO.OutPut.Graphics.Graphics_Game.Game_Image;
+package code.IO.OutPut.Graphics.Graphics_Image;
 
-import code.Calc.Game.World.Coordinate;
+import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
