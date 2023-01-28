@@ -1,6 +1,5 @@
 package code.Calc.Game.World;
 
-import code.Calc.Game.Objects.Hitbox.HitBox;
 import code.Calc.Game.Objects.Object;
 
 public class World_Chunk {
@@ -81,11 +80,22 @@ public class World_Chunk {
         tiles[coordinate.getX() + coordinate.getY() * width] = tile;
     }
 
-    public boolean intersects(Object object) {
+    public boolean collides(Object object) {
         for (World_Tile tile : tiles) {
             if (tile != null && tile.intersects(object)) {
                 return true;
             }
+        }
+        return false;
+    }
+
+    public boolean intersects(Coordinate max, Coordinate min){
+        Coordinate chunkMin = coordinate;
+        Coordinate chunkMax = new Coordinate((coordinate.getX() + width), (coordinate.getY() + height));
+        if (chunkMin.toBottomRight(min) && chunkMin.toTopLeft(max)) {
+            return true;
+        } else if(chunkMax.toBottomRight(min) && chunkMax.toTopLeft(max)){
+            return true;
         }
         return false;
     }

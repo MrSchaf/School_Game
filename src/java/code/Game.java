@@ -1,66 +1,67 @@
 package code;
 
-import code.Calc.Actions.Action_Listener;
-import code.Calc.Actions.Clock.Action_ClockFrame;
+import code.Calc.Calc;
+import code.IO.OutPut.Out;
+import code.IO.InPut.In;
+
 import code.Calc.Clock.Clock;
 import code.Calc.Game.World.Generation.Generation;
 import code.Calc.Game.World.Generation.Generation_NoGen;
 import code.Calc.Game.World.World;
-import code.IO.InPut.In;
-import code.IO.OutPut.Graphics.Graphics_ContentPane;
-import code.IO.OutPut.Graphics.Graphics_Frame;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
-import code.IO.OutPut.Out;
 
 public class Game {
-    private Clock clock;
-    private Out out;
+    private Calc calc;
     private In in;
-    private World world;
-
-    private Graphics_Frame frame;
-
+    private Out out;
     private int seed;
 
     public Game() {
-        initSeed();
-        initClock(100, 60);
+        int tps = 100;
+        int fps = 60;
         int chunkSize = 16;
-        int tileSize_Ratio = 1;
-        initCalc(chunkSize, tileSize_Ratio, new Generation_NoGen(chunkSize * tileSize_Ratio));
+        int tileSize = 1;
+        initCalc(tps, fps, chunkSize, tileSize, new Generation_NoGen(chunkSize * tileSize));
         initInput();
         initOutput();
-
-        Graphics_ContentPane g_cp = frame.getContentPane();
-
-        Action_Listener actionListener = (int code) -> {
-            frame.frame();
-        };
-
-        Action_ClockFrame action_clock = new Action_ClockFrame(actionListener, clock, "Frame", 1, -1);
-
-        clock.start();
     }
 
-    private void initSeed(){
-        seed = (int) (Math.random() * 1000000);
-//        System.out.println("Seed: " + seed);
-    }
-
-    private void initCalc(int chunckSize, int tileSize_Ratio, Generation generation){
-        world = new World(seed, chunckSize, tileSize_Ratio, generation);
-    }
-
-    private void initClock(int tps, int fps){
-        clock = new Clock(tps, fps);
+    // Initializations
+    private void initCalc(int tps, int fps, int chunkSize, int tileSize_Ratio, Generation generation){
+        calc = new Calc(this, tps, fps, chunkSize, tileSize_Ratio);
     }
 
     private void initInput(){
-        // in = new In();
+        in = new In();
     }
 
     private void initOutput(){
-        out = new Out();
-        frame = new Graphics_Frame(Resolution.RES_720p, "Game", world);
+        out = new Out(this, in, Resolution.RES_720p, "Game");
+    }
+
+    // Public Methods
+    public void start(){
+        calc.start();
+    }
+
+    public void stop(){
+        calc.stop();
+    }
+
+    public void tick(){
+        calc.getWorld().tick();
+    }
+
+    public void frame(){
+        out.frame();
+    }
+
+    // Getters
+    public World getWorld(){
+        return calc.getWorld();
+    }
+
+    public Clock getClock(){
+        return calc.getClock();
     }
 }

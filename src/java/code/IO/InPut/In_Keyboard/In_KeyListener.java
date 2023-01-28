@@ -4,6 +4,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class In_KeyListener implements KeyListener {
+    private final Keyboard_Keys keyboardKeys;
+
+    public In_KeyListener(Keyboard_Keys keyboardKeys) {
+        this.keyboardKeys = keyboardKeys;
+    }
 
     @Override
     public void keyTyped(KeyEvent e) {}
@@ -11,12 +16,12 @@ public class In_KeyListener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
-        Keyboard_Keys.setPressedKey(true, code);
+        keyboardKeys.setPressedKey(true, code);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
         int code = e.getKeyCode();
-        Keyboard_Keys.setPressedKey(false, code);
+        keyboardKeys.setPressedKey(false, code);
     }
 }

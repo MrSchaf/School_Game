@@ -7,11 +7,13 @@ import code.Calc.Clock.Timer.Clock_Timer;
 import code.Calc.Clock.Timer.Clock_Timer_Frame;
 import code.Calc.Clock.Timer.Clock_Timer_Tick;
 import code.Calc.Clock.Timer.Clock_Timer_Time;
+import code.Game;
 
 import java.util.HashMap;
 import java.util.Vector;
 
 public class Clock {
+    private final Game game;
     private double tps;
     private double fps;
 
@@ -28,7 +30,8 @@ public class Clock {
     private final HashMap<String, Clock_Timer> times;
     private final HashMap<String, Vector<Clock_Timer>> waiting;
 
-    public Clock(double tps, double fps) {
+    public Clock(Game game, double tps, double fps) {
+        this.game = game;
         this.tps = tps;
         this.fps = fps;
         tick = 0;
@@ -79,6 +82,8 @@ public class Clock {
                 }
             }
         }
+
+        game.tick();
     }
 
     protected void frame(double delta) {
@@ -92,6 +97,8 @@ public class Clock {
                 }
             }
         }
+
+        game.frame();
     }
 
     public void start(){

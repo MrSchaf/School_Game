@@ -1,82 +1,15 @@
 package code.IO.InPut;
 
-import java.awt.event.KeyEvent;
+import code.IO.InPut.In_Keyboard.Keyboard_Keys;
 
 public class In {
-    public static int A = KeyEvent.VK_A;
-    public static int B = KeyEvent.VK_B;
-    public static int C = KeyEvent.VK_C;
-    public static int D = KeyEvent.VK_D;
-    public static int E = KeyEvent.VK_E;
-    public static int F = KeyEvent.VK_F;
-    public static int G = KeyEvent.VK_G;
-    public static int H = KeyEvent.VK_H;
-    public static int I = KeyEvent.VK_I;
-    public static int J = KeyEvent.VK_J;
-    public static int K = KeyEvent.VK_K;
-    public static int L = KeyEvent.VK_L;
-    public static int M = KeyEvent.VK_M;
-    public static int N = KeyEvent.VK_N;
-    public static int O = KeyEvent.VK_O;
-    public static int P = KeyEvent.VK_P;
-    public static int Q = KeyEvent.VK_Q;
-    public static int R = KeyEvent.VK_R;
-    public static int S = KeyEvent.VK_S;
-    public static int T = KeyEvent.VK_T;
-    public static int U = KeyEvent.VK_U;
-    public static int V = KeyEvent.VK_V;
-    public static int W = KeyEvent.VK_W;
-    public static int X = KeyEvent.VK_X;
-    public static int Y = KeyEvent.VK_Y;
-    public static int Z = KeyEvent.VK_Z;
-    public static int ZERO = KeyEvent.VK_0;
-    public static int ONE = KeyEvent.VK_1;
-    public static int TWO = KeyEvent.VK_2;
-    public static int THREE = KeyEvent.VK_3;
-    public static int FOUR = KeyEvent.VK_4;
-    public static int FIVE = KeyEvent.VK_5;
-    public static int SIX = KeyEvent.VK_6;
-    public static int SEVEN = KeyEvent.VK_7;
-    public static int EIGHT = KeyEvent.VK_8;
-    public static int NINE = KeyEvent.VK_9;
-    public static int LEFT = KeyEvent.VK_LEFT;
-    public static int RIGHT = KeyEvent.VK_RIGHT;
-    public static int UP = KeyEvent.VK_UP;
-    public static int DOWN = KeyEvent.VK_DOWN;
-    public static int ENTER = KeyEvent.VK_ENTER;
-    public static int SPACE = KeyEvent.VK_SPACE;
-    public static int ESCAPE = KeyEvent.VK_ESCAPE;
-    public static int LEFT_SHIFT = KeyEvent.VK_SHIFT;
-    public static int RIGHT_SHIFT = KeyEvent.VK_SHIFT;
-    public static int LEFT_CONTROL = KeyEvent.VK_CONTROL;
-    public static int RIGHT_CONTROL = KeyEvent.VK_CONTROL;
-    public static int ALT = KeyEvent.VK_ALT;
-    public static int TAB = KeyEvent.VK_TAB;
-    public static int BACKSPACE = KeyEvent.VK_BACK_SPACE;
-    public static int DELETE = KeyEvent.VK_DELETE;
-    public static int INSERT = KeyEvent.VK_INSERT;
-    public static int HOME = KeyEvent.VK_HOME;
-    public static int END = KeyEvent.VK_END;
-    public static int PAGE_UP = KeyEvent.VK_PAGE_UP;
-    public static int PAGE_DOWN = KeyEvent.VK_PAGE_DOWN;
-    public static int MINUS = KeyEvent.VK_MINUS;
-    public static int PLUS = KeyEvent.VK_PLUS;
-    public static int PERIOD = KeyEvent.VK_PERIOD;
-    public static int COMMA = KeyEvent.VK_COMMA;
-    public static int BACK_QUOTE = KeyEvent.VK_BACK_QUOTE;
-    public static int HASHTAG = KeyEvent.VK_NUMBER_SIGN;
-    public static int F1 = KeyEvent.VK_F1;
-    public static int F2 = KeyEvent.VK_F2;
-    public static int F3 = KeyEvent.VK_F3;
-    public static int F4 = KeyEvent.VK_F4;
-    public static int F5 = KeyEvent.VK_F5;
-    public static int F6 = KeyEvent.VK_F6;
-    public static int F7 = KeyEvent.VK_F7;
-    public static int F8 = KeyEvent.VK_F8;
-    public static int F9 = KeyEvent.VK_F9;
-    public static int F10 = KeyEvent.VK_F10;
-    public static int F11 = KeyEvent.VK_F11;
-    public static int F12 = KeyEvent.VK_F12;
+    private final Keyboard_Keys keyboard;
 
+    public In(){
+        keyboard = new Keyboard_Keys();
+    }
 
+    public Keyboard_Keys getKeyboard(){
+        return keyboard;
+    }
 }

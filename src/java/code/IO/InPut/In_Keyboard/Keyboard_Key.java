@@ -28,6 +28,10 @@ public class Keyboard_Key {
         return pressed;
     }
 
+    public Action_Key getActionKey(){
+        return action;
+    }
+
     public void setPressed(boolean pressed){
         this.pressed = pressed;
     }
