@@ -1,4 +1,6 @@
-package code.IO.OutPut.Graphics.Graphics_Game.Game_Image;
+package code.IO.OutPut.Graphics.Graphics_Image;
+
+import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 
 import code.Calc.Game.Objects.Object;
 import code.Calc.Game.World.World_Display_Objects;
