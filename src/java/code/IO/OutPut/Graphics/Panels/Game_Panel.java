@@ -2,8 +2,8 @@ package code.IO.OutPut.Graphics.Panels;
 
 import code.Calc.Game.World.World;
 import code.Calc.Game.World.World_Display_Objects;
-import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Image_Paint;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
+import code.IO.OutPut.Graphics.Graphics_Image.Image_Paint;
 
 import java.awt.*;
 

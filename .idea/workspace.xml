@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="finished up clock and started to implement keylistener">
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object_Images/Images.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dir/ToDo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Clock/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Clock/Clock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/In_KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/In_KeyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Game/Game_Image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Game/Game_Image/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Game/Game_Image/Image_Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Game/Game_Image/Image_Paint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" afterDir="false" />
-    </list>
+    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="worked on world displaying" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +71,7 @@
       <workItem from="1674297678629" duration="5348000" />
       <workItem from="1674770259703" duration="374000" />
       <workItem from="1674906149214" duration="107000" />
-      <workItem from="1674906298496" duration="8586000" />
+      <workItem from="1674906298496" duration="9043000" />
     </task>
     <task id="LOCAL-00001" summary="fixed Clock timing">
       <created>1674298948197</created>
@@ -124,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674770610129</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="worked on world displaying">
+      <created>1674915407957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674915407957</updated>
+    </task>
+    <task id="LOCAL-00006" summary="worked on world displaying">
+      <created>1674915442421</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674915442421</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed Clock timing" />
     <MESSAGE value="finished up clock and started to implement keylistener" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished up clock and started to implement keylistener" />
+    <MESSAGE value="worked on world displaying" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on world displaying" />
   </component>
 </project>

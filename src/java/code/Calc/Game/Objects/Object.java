@@ -4,7 +4,6 @@ import code.Calc.Game.Objects.Hitbox.HitBox;
 import code.Calc.Game.Objects.Object_Images.Images;
 import code.Calc.Game.World.Coordinate;
 import code.Calc.Game.World.World_Display_Objects;
-import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Image;
 
 import java.awt.*;
 
