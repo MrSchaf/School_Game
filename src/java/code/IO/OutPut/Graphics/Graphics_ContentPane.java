@@ -8,9 +8,9 @@ import java.awt.*;
 import java.util.HashMap;
 
 public class Graphics_ContentPane {
-    private JFrame frame;
-    private Container contentPane;
-    private HashMap<String,Graphics_Panel> panels;
+    private final JFrame frame;
+    private final Container contentPane;
+    private final HashMap<String,Graphics_Panel> panels;
     private Graphics_Panel currentPanel;
 
     private Resolution resolution;
@@ -18,7 +18,6 @@ public class Graphics_ContentPane {
     public Graphics_ContentPane(JFrame frame, Resolution resolution) {
         this.frame = frame;
         this.contentPane = frame.getContentPane();
-        contentPane.setBackground(Color.YELLOW);
         panels = new HashMap<>();
         this.resolution = resolution;
     }

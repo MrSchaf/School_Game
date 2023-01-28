@@ -25,7 +25,6 @@ public class Graphics_Panel {
         };
 
         panel.setSize(resolution.getWidth(), resolution.getHeight());
-        paint();
     }
 
     public void paint() {

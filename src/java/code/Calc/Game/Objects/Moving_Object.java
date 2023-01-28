@@ -1,6 +1,7 @@
 package code.Calc.Game.Objects;
 
 import code.Calc.Game.Objects.Hitbox.HitBox;
+import code.Calc.Game.Objects.Object_Images.Images;
 import code.Calc.Game.World.Coordinate;
 import code.Calc.Math.Math_Vector;
 import code.Calc.Game.World.World_Object;
@@ -9,8 +10,8 @@ public class Moving_Object extends World_Object {
     private Math_Vector vel;
     private double delta;
 
-    public Moving_Object(Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, int image) {
-        super(coordinate, hitBox, rotation, solid, image);
+    public Moving_Object(Images images, Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, int image) {
+        super(images, coordinate, hitBox, rotation, solid, image);
     }
 
     public void move(double delta) {

@@ -1,9 +1,11 @@
 package code;
 
+import code.Calc.Actions.Action_Listener;
 import code.Calc.Calc;
+import code.IO.InPut.In_Keyboard.In_KeyListener;
+import code.IO.InPut.In_Keyboard.Keyboard_Keys;
 import code.IO.OutPut.Out;
 import code.IO.InPut.In;
-
 import code.Calc.Clock.Clock;
 import code.Calc.Game.World.Generation.Generation;
 import code.Calc.Game.World.Generation.Generation_NoGen;
@@ -17,6 +19,23 @@ public class Game {
     private int seed;
 
     public Game() {
+        init();
+
+        Action_Listener action_listener = new Action_Listener() {
+            @Override
+            protected void actionPerformed(int code) {
+                if (code == 1) {
+                    System.out.println("E pressed");
+                } else if (code == 0) {
+                    System.out.println("E released");
+                }
+            }
+        };
+        in.getKeyboard().addKeyListener(action_listener, Keyboard_Keys.Key_E);
+    }
+
+    // Initializations
+    public void init(){
         int tps = 100;
         int fps = 60;
         int chunkSize = 16;
@@ -26,7 +45,6 @@ public class Game {
         initOutput();
     }
 
-    // Initializations
     private void initCalc(int tps, int fps, int chunkSize, int tileSize_Ratio, Generation generation){
         calc = new Calc(this, tps, fps, chunkSize, tileSize_Ratio);
     }
@@ -63,5 +81,9 @@ public class Game {
 
     public Clock getClock(){
         return calc.getClock();
+    }
+
+    public In_KeyListener getKeyListener(){
+        return in.getKeyListener();
     }
 }

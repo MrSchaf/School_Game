@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="worked on world displaying" />
+    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="fixed objects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Actions/Action_Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/Action_Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Actions/In/Keyboard/Action_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,11 +34,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ea6abd9e-8213-48f0-bb33-1b928b41973b" />
+        <option name="url" value="https://github.com/MrSchaf/R000_School-Game.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KdHLPARKdaLsXSOpX2BMrPZRto" />
   <component name="ProjectLevelVcsManager">
@@ -71,7 +101,8 @@
       <workItem from="1674297678629" duration="5348000" />
       <workItem from="1674770259703" duration="374000" />
       <workItem from="1674906149214" duration="107000" />
-      <workItem from="1674906298496" duration="9043000" />
+      <workItem from="1674906298496" duration="9837000" />
+      <workItem from="1674922880942" duration="13133000" />
     </task>
     <task id="LOCAL-00001" summary="fixed Clock timing">
       <created>1674298948197</created>
@@ -115,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674915442421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed objects">
+      <created>1674915629180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674915629180</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +174,7 @@
     <MESSAGE value="fixed Clock timing" />
     <MESSAGE value="finished up clock and started to implement keylistener" />
     <MESSAGE value="worked on world displaying" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on world displaying" />
+    <MESSAGE value="fixed objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed objects" />
   </component>
 </project>

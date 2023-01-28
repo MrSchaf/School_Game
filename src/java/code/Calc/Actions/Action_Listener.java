@@ -1,5 +1,5 @@
 package code.Calc.Actions;
 
-public interface Action_Listener {
-    void actionPerformed(int code);
+public abstract class Action_Listener {
+    protected abstract void actionPerformed(int code);
 }
