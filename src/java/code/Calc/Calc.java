@@ -1,6 +1,5 @@
 package code.Calc;
 
-import code.Calc.Actions.Action_Listener;
 import code.Calc.Game.Objects.Object_Images.Images;
 import code.Game;
 import code.Calc.Clock.Clock;
@@ -17,7 +16,7 @@ public class Calc {
         this.game = game;
         clock = new Clock(game, tps, fps);
         world = new World(chunkSize, tileSize, null);
-        images = new Images("src/resources/files/images");
+        images = new Images("src/resources/files/images/Objects/");
     }
 
     public World getWorld() {

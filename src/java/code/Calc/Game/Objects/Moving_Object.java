@@ -10,7 +10,7 @@ public class Moving_Object extends World_Object {
     private Math_Vector vel;
     private double delta;
 
-    public Moving_Object(Images images, Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, int image) {
+    public Moving_Object(Images images, Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, String image) {
         super(images, coordinate, hitBox, rotation, solid, image);
     }
 

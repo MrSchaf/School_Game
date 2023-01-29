@@ -52,7 +52,7 @@ public class Graphics_Frame {
         contentPane = new Graphics_ContentPane(this.frame, size);
         contentPane.addPanel("Game", new Game_Panel(size, world));
         contentPane.addPanel("Menu", new Menu_Panel(size));
-        contentPane.setCurrentPanel("Menu");
+        contentPane.setCurrentPanel("Game");
 
         frame.setContentPane(contentPane.getContainer());
     }
@@ -63,7 +63,6 @@ public class Graphics_Frame {
 
     public void frame(){
         setSize(new Resolution(frame.getWidth(), frame.getHeight()));
-        // System.out.println("Frame: " + frame.getWidth() + " " + frame.getHeight());
         contentPane.paint();
         frame.repaint();
 
@@ -89,7 +88,7 @@ public class Graphics_Frame {
             setFullscreen();
             fullScreen = true;
         }
-
+        contentPane.requestFocus();
     }
 
     public void setFullscreen(){
@@ -99,7 +98,6 @@ public class Graphics_Frame {
             frame.setUndecorated(true);
             device.setFullScreenWindow(frame);
             frame.validate();
-            contentPane.requestFocus();
         }
     }
 
@@ -110,7 +108,6 @@ public class Graphics_Frame {
         frame.setUndecorated(false);
         frame.setSize(preferredSize.getWidth(), preferredSize.getHeight());
         frame.setVisible(true);
-        contentPane.requestFocus();
     }
 
     public JFrame getFrame(){
@@ -144,5 +141,14 @@ public class Graphics_Frame {
 
     public void changePanel(String name){
         contentPane.setCurrentPanel(name);
+        contentPane.requestFocus();
+    }
+
+    public void changePanel(){
+        if(contentPane.getCurrentPanelName().equals("Game")){
+            contentPane.setCurrentPanel("Menu");
+        } else if(contentPane.getCurrentPanelName().equals("Menu")) {
+            contentPane.setCurrentPanel("Game");
+        }
     }
 }

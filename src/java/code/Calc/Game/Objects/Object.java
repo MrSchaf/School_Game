@@ -8,30 +8,34 @@ import code.Calc.Game.World.World_Display_Objects;
 import java.awt.*;
 
 public abstract class Object {
-    private final Images images;
     protected Coordinate coordinate;
     private final HitBox hitBox;
     protected double rotation;
-    private int image;
 
-    public Object(Images images,int x, int y,HitBox hitBox, double rotation, int image) {
-        this.images = images;
+    private final Images images;
+    private String name;
+
+    public Object(int x, int y,HitBox hitBox, double rotation, Images images, String name) {
         coordinate = new Coordinate(x, y);
         this.hitBox = hitBox;
         this.rotation = rotation;
-        this.image = image;
+
+        this.images = images;
+        this.name = name;
     }
 
-    public Object(Images images, Coordinate coordinate, HitBox hitBox, double rotation, int image) {
+    public Object(Coordinate coordinate, HitBox hitBox, double rotation, Images images, String name){
         this.images = images;
         this.coordinate = coordinate;
         this.hitBox = hitBox;
         this.rotation = rotation;
-        this.image = image;
+        this.name = name;
     }
 
     public void paint(Graphics g, World_Display_Objects worldObjects){
-        g.drawImage(images.getImage(image), coordinate.getX(), coordinate.getY(), null);
+        int x = (coordinate.getX() - worldObjects.getCoordinate().getX());
+        int y = (coordinate.getY() - worldObjects.getCoordinate().getY());
+        g.drawImage(images.getImage(name), x, y, null);
     }
 
     public boolean intersects(Coordinate x, Coordinate y){
@@ -58,8 +62,8 @@ public abstract class Object {
         return coordinate;
     }
 
-    public int getImage(){
-        return image;
+    public String getImage(){
+        return name;
     }
 
     public void setX(int x) {
@@ -70,7 +74,7 @@ public abstract class Object {
         coordinate.setY(y);
     }
 
-    public void setImage(int image){
-        this.image = image;
+    public void setImage(String name){
+        this.name = name;
     }
 }

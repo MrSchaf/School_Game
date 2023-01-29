@@ -27,7 +27,6 @@ public class Image {
         try {
             input = ImageIO.read(url);
             Image_Paint.paint(image.getGraphics(), input, resolution);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

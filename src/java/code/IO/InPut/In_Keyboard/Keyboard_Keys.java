@@ -3,7 +3,8 @@ package code.IO.InPut.In_Keyboard;
 import code.Calc.Actions.Action_Listener;
 
 import java.awt.event.KeyEvent;
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Vector;
 
 public class Keyboard_Keys {
@@ -55,7 +56,7 @@ public class Keyboard_Keys {
     public static final Keyboard_Key Key_Enter = new Keyboard_Key(KeyEvent.VK_ENTER, "Enter");
     public static final Keyboard_Key Key_Escape = new Keyboard_Key(KeyEvent.VK_ESCAPE, "Escape");
     public static final Keyboard_Key Key_Backspace = new Keyboard_Key(KeyEvent.VK_BACK_SPACE, "Backspace");
-    public static final Keyboard_Key Key_Tap = new Keyboard_Key(KeyEvent.VK_TAB, "Tab");
+    public static final Keyboard_Key Key_Tab = new Keyboard_Key(KeyEvent.VK_TAB, "Tab");
     public static final Keyboard_Key Key_F1 = new Keyboard_Key(KeyEvent.VK_F1, "F1");
     public static final Keyboard_Key Key_F2 = new Keyboard_Key(KeyEvent.VK_F2, "F2");
     public static final Keyboard_Key Key_F3 = new Keyboard_Key(KeyEvent.VK_F3, "F3");
@@ -73,12 +74,11 @@ public class Keyboard_Keys {
     public static final Keyboard_Key Key_F15 = new Keyboard_Key(KeyEvent.VK_F15, "F15");
     public static final Keyboard_Key Key_F16 = new Keyboard_Key(KeyEvent.VK_F16, "F16");
 
-    private static final Keyboard_Key[] keys = {
-        Key_A, Key_B, Key_C, Key_D, Key_E, Key_F, Key_G, Key_H, Key_I, Key_J, Key_K, Key_L, Key_M, Key_N, Key_O, Key_P, Key_Q, Key_R, Key_S, Key_T, Key_U, Key_V, Key_W, Key_X, Key_Y, Key_Z,
-        Key_0, Key_1, Key_2, Key_3, Key_4, Key_5, Key_6, Key_7, Key_8, Key_9,
-        Key_Space, Key_Shift, Key_Control, Key_Alt, Key_Up, Key_Down, Key_Left, Key_Right, Key_Enter, Key_Escape, Key_Backspace, Key_Tap,
-        Key_F1, Key_F2, Key_F3, Key_F4, Key_F5, Key_F6, Key_F7, Key_F8, Key_F9, Key_F10, Key_F11, Key_F12, Key_F13, Key_F14, Key_F15, Key_F16
-    };
+    private static final ArrayList<Keyboard_Key>  keys = new ArrayList<>(Arrays.asList(
+    Key_A, Key_B, Key_C, Key_D, Key_E, Key_F, Key_G, Key_H, Key_I, Key_J, Key_K, Key_L, Key_M, Key_N, Key_O, Key_P, Key_Q, Key_R, Key_S, Key_T, Key_U, Key_V, Key_W, Key_X, Key_Y, Key_Z,
+    Key_0, Key_1, Key_2, Key_3, Key_4, Key_5, Key_6, Key_7, Key_8, Key_9,
+    Key_Space, Key_Shift, Key_Control, Key_Alt, Key_Up, Key_Down, Key_Left, Key_Right, Key_Enter, Key_Escape, Key_Backspace, Key_Tab,
+    Key_F1, Key_F2, Key_F3, Key_F4, Key_F5, Key_F6, Key_F7, Key_F8, Key_F9, Key_F10, Key_F11, Key_F12, Key_F13, Key_F14, Key_F15, Key_F16));
 
     private final Vector<Keyboard_Key> pressedKeys = new Vector<>();
 
@@ -130,11 +130,15 @@ public class Keyboard_Keys {
     }
 
     public void setPressedKey(boolean pressed, int keyCode){
-        Objects.requireNonNull(getKey(keyCode)).setPressed(pressed);
-        // System.out.println("Key: " + getKey(keyCode).getName() + " pressed: " + pressed);
-        if(pressed) {
-            addPressedKey(getKey(keyCode));
+        if(containsKey(keyCode)){
+            if(pressed) {
+                addPressedKey(getKey(keyCode));
+            }
         }
+    }
+
+    public boolean containsKey(int keyCode){
+        return getKey(keyCode) != null;
     }
 
     private void addPressedKey(Keyboard_Key key){

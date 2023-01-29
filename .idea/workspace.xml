@@ -4,18 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="tried to fix Keylistener">
+    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="fixed Keylistener and added Windowed/Fullscreen">
+      <change afterPath="$PROJECT_DIR$/src/resources/files/images/Objects/player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/files/images/Objects/tile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/files/images/World.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/calc/Clock/Clock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/calc/Clock/Clock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Floor_Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object_Images/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object_Images/Images.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/In_KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/In_KeyListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image_Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image_Paint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/files/images/Image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/files/images/Image.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +77,29 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Moritz H/Documents/GitHub/R001_School-Game/src/resources/files/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Moritz H\Documents\GitHub\R001_School-Game\src\resources\files\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Moritz H\Documents\GitHub\R001_School-Game\src\resources\files\images\Objects" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -101,7 +128,9 @@
       <workItem from="1674906149214" duration="107000" />
       <workItem from="1674906298496" duration="9837000" />
       <workItem from="1674922880942" duration="13231000" />
-      <workItem from="1674989457944" duration="5282000" />
+      <workItem from="1674989457944" duration="11565000" />
+      <workItem from="1675001269075" duration="1663000" />
+      <workItem from="1675004217555" duration="3929000" />
     </task>
     <task id="LOCAL-00001" summary="fixed Clock timing">
       <created>1674298948197</created>
@@ -159,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674940736357</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed Keylistener and added Windowed/Fullscreen">
+      <created>1674995172119</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674995172120</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,11 +213,23 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixed Clock timing" />
     <MESSAGE value="finished up clock and started to implement keylistener" />
     <MESSAGE value="worked on world displaying" />
     <MESSAGE value="fixed objects" />
     <MESSAGE value="tried to fix Keylistener" />
-    <option name="LAST_COMMIT_MESSAGE" value="tried to fix Keylistener" />
+    <MESSAGE value="fixed Keylistener and added Windowed/Fullscreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed Keylistener and added Windowed/Fullscreen" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

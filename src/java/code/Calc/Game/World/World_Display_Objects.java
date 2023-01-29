@@ -14,39 +14,38 @@ public class World_Display_Objects {
     private final int tileSize;
 
     Hashtable<String, Vector<Object>> objects;
-    private Vector<Object> enteties;
+    private Vector<Object> entities;
     private Vector<Object> tiles;
 
-    // private
-
-    public World_Display_Objects(Resolution resolution, double scale, World world){
+    public World_Display_Objects(Resolution resolution, double scale, World world, Coordinate coordinate){
         this.resolution = resolution;
         this.scale = scale;
         this.tileSize = world.getTileSize();
+        this.world = world;
+        this.coordinate = coordinate;
 
         this.objects = new Hashtable<>();
-        this.enteties = new Vector<>();
+        this.entities = new Vector<>();
         this.tiles = new Vector<>();
 
-        objects.put("entities", enteties);
+        objects.put("entities", entities);
         objects.put("tiles", tiles);
     }
 
     public void setObjects(){
-        int minX = (resolution.getWidth() / 2) / tileSize;
-        int maxX = (resolution.getWidth() / 2) / tileSize;
-
-        int minY = (resolution.getHeight() / 2) / tileSize;
-        int maxY = (resolution.getHeight() / 2) / tileSize;
-
+        int minX = coordinate.getX() - (resolution.getWidth() / 2);
+        int minY = coordinate.getY() -  (resolution.getHeight() / 2);
         Coordinate min = new Coordinate(minX, minY);
+
+        int maxX = coordinate.getX() + (resolution.getWidth() / 2);
+        int maxY = coordinate.getY() + (resolution.getHeight() / 2);
         Coordinate max = new Coordinate(maxX, maxY);
 
-        Vector<Object> entities = world.getEntities();
-        enteties = getEntities(entities, min, max);
+        Vector<Object> entityVector = world.getEntities();
+        this.entities = getEntities(entityVector, min, max);
 
-        Vector<World_Chunk> chunks = world.getChunks();
-        tiles = getTiles(chunks, min, max);
+        Vector<World_Chunk> chunkVector = world.getChunks();
+        tiles = getTiles(chunkVector, min, max);
     }
 
     public Vector<Object> getTiles(Vector<World_Chunk> chunks, Coordinate min, Coordinate max) {
@@ -107,5 +106,13 @@ public class World_Display_Objects {
 
     public void setScale(double scale) {
         this.scale = scale;
+    }
+
+    public void setCoordinate(Coordinate coordinate) {
+        this.coordinate = coordinate;
+    }
+
+    public Coordinate getCoordinate() {
+        return coordinate;
     }
 }

@@ -17,11 +17,14 @@ public class World {
     private Hashtable<String, Object> entities;
     private Hashtable<Coordinate, World_Chunk> chunks;
 
-    public World(int chunkSize, int tileSize_Ratio, Generation generation) {
+    public World(int chunkSize, int tileSize, Generation generation) {
         this.seed = getSeed();
         this.chunkSize = chunkSize;
-        this.tileSize = tileSize_Ratio;
+        this.tileSize = tileSize;
         this.generation = generation;
+
+        this.entities = new Hashtable<>();
+        this.chunks = new Hashtable<>();
     }
 
     public boolean addEntity(String name, Object object){

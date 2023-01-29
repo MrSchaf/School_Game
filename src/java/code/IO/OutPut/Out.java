@@ -33,4 +33,8 @@ public class Out {
     public void changeFullscreen() {
         graphics.changeFullscreen();
     }
+
+    public void changePanel(){
+        graphics.changePanel();
+    }
 }

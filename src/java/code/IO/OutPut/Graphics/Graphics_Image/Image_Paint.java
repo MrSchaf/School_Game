@@ -43,5 +43,4 @@ public class Image_Paint {
 
         g.drawImage(after, 0, 0, size.getWidth(), size.getHeight(), null);
     }
-
 }

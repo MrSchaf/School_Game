@@ -29,7 +29,17 @@ public class Game {
                 }
             }
         };
-        in.getKeyboard().addKeyListener(action_listener, Keyboard_Keys.Key_E);
+        in.getKeyboard().addKeyListener(action_listener, Keyboard_Keys.Key_F11);
+
+        Action_Listener action_listener2 = new Action_Listener() {
+            @Override
+            protected void actionPerformed(int code) {
+                if (code == 1) {
+                    out.changePanel();
+                }
+            }
+        };
+        in.getKeyboard().addKeyListener(action_listener2, Keyboard_Keys.Key_F10);
 
         start();
     }
