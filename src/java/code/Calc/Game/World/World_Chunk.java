@@ -1,19 +1,22 @@
 package code.Calc.Game.World;
 
 import code.Calc.Game.Objects.Object;
+import code.Calc.Game.Objects.Object_Images.Images;
 
 public class World_Chunk {
     private Coordinate coordinate;
     private int width;
     private int height;
 
-    private World_Tile[] tiles;
+    private World_Tile[][] tiles;
 
-    public World_Chunk(Coordinate coordinate, int width, int height) {
+    public World_Chunk(Coordinate coordinate, int width, int height, Images images) {
         this.coordinate = coordinate;
         this.width = width;
         this.height = height;
-        tiles = new World_Tile[width * height];
+        tiles = new World_Tile[width][height];
+        int x = coordinate.getX();
+        int y = coordinate.getY();
     }
 
     public Coordinate getCoordinate() {
@@ -36,16 +39,16 @@ public class World_Chunk {
         return height;
     }
 
-    public World_Tile[] getTiles(){
+    public World_Tile[][] getTiles(){
         return tiles;
     }
 
     public World_Tile getObject(int x, int y) {
-        return tiles[x + y * width];
+        return tiles[x][y];
     }
 
     public World_Tile getObject(Coordinate coordinate) {
-        return tiles[coordinate.getX() + coordinate.getY() * width];
+        return tiles[coordinate.getX()][coordinate.getY()];
     }
 
     public void setCoordinate(Coordinate coordinate) {
@@ -68,22 +71,24 @@ public class World_Chunk {
         this.height = height;
     }
 
-    public void setTiles(World_Tile[] tiles){
+    public void setTiles(World_Tile[][] tiles){
         this.tiles = tiles;
     }
 
     public void setObject(int x, int y, World_Tile tile) {
-        tiles[x + y * width] = tile;
+        tiles[x][y] = tile;
     }
 
     public void setObject(Coordinate coordinate, World_Tile tile) {
-        tiles[coordinate.getX() + coordinate.getY() * width] = tile;
+        tiles[coordinate.getX()][coordinate.getY()] = tile;
     }
 
     public boolean collides(Object object) {
-        for (World_Tile tile : tiles) {
-            if (tile != null && tile.intersects(object)) {
-                return true;
+        for (World_Tile[] slice : tiles) {
+            for (World_Tile tile: slice) {
+                if (tile != null && tile.intersects(object)) {
+                    return true;
+                }
             }
         }
         return false;
@@ -98,5 +103,9 @@ public class World_Chunk {
             return true;
         }
         return false;
+    }
+
+    public void setTile(int x, int y, World_Tile tile) {
+        tiles[x][y] = tile;
     }
 }

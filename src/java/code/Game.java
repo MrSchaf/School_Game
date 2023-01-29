@@ -49,8 +49,8 @@ public class Game {
         int tps = 100;
         int fps = 60;
         int chunkSize = 16;
-        int tileSize = 1;
-        initCalc(tps, fps, chunkSize, tileSize, new Generation_NoGen(chunkSize * tileSize));
+        int tileSize = 10;
+        initCalc(tps, fps, chunkSize, tileSize, new Generation_NoGen(chunkSize));
         initInput();
         initOutput();
     }

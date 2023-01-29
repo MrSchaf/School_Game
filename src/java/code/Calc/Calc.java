@@ -15,8 +15,8 @@ public class Calc {
     public Calc(Game game, int tps, int fps, int chunkSize, int tileSize){
         this.game = game;
         clock = new Clock(game, tps, fps);
-        world = new World(chunkSize, tileSize, null);
         images = new Images("src/resources/files/images/Objects/");
+        world = new World(chunkSize, tileSize, null, images);
     }
 
     public World getWorld() {
@@ -38,6 +38,4 @@ public class Calc {
     public Images getImages(){
         return images;
     }
-
-
 }

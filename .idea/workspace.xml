@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="fixed Keylistener and added Windowed/Fullscreen">
-      <change afterPath="$PROJECT_DIR$/src/resources/files/images/Objects/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/files/images/Objects/tile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/files/images/World.png" afterDir="false" />
+    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="Started to add World displaying">
+      <change afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Displaying_Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Calc.java" afterDir="false" />
@@ -15,21 +13,19 @@
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object_Images/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object_Images/Images.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/In_KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/In_KeyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/InPut/In_Keyboard/Keyboard_Keys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_ContentPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image_Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image_Paint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Game_Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Panels/Graphics_Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Out.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/files/images/Image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/files/images/Image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/files/images/World.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/files/images/World.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +126,8 @@
       <workItem from="1674922880942" duration="13231000" />
       <workItem from="1674989457944" duration="11565000" />
       <workItem from="1675001269075" duration="1663000" />
-      <workItem from="1675004217555" duration="3929000" />
+      <workItem from="1675004217555" duration="6357000" />
+      <workItem from="1675013817397" duration="3554000" />
     </task>
     <task id="LOCAL-00001" summary="fixed Clock timing">
       <created>1674298948197</created>
@@ -195,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674995172120</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Started to add World displaying">
+      <created>1675008385418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675008385418</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +224,8 @@
     <MESSAGE value="fixed objects" />
     <MESSAGE value="tried to fix Keylistener" />
     <MESSAGE value="fixed Keylistener and added Windowed/Fullscreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed Keylistener and added Windowed/Fullscreen" />
+    <MESSAGE value="Started to add World displaying" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to add World displaying" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

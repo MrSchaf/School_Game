@@ -6,7 +6,9 @@ import code.Calc.Game.World.World_Display_Objects;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Graphics.Graphics_Image.Image_Paint;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
 
 public class Game_Panel extends Graphics_Panel {
    private final World_Display_Objects worldObjects;
@@ -21,6 +23,14 @@ public class Game_Panel extends Graphics_Panel {
     public void paint() {
        worldObjects.setObjects();
        Image_Paint.frame(getImage(), worldObjects);
+
+       File file = new File("src/resources/files/images/World.png");
+       try {
+           ImageIO.write(getImage().getImage(), "png", file);
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
+
        super.paint();
     }
 }

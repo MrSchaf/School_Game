@@ -25,7 +25,8 @@ public class Images {
 
         for (File file : listOfFiles) {
             if (file.isFile()) {
-                images.put(file.getName(), readImage(imagePath + file.getName()));
+                String name = file.getName().replace(".png", "");
+                images.put(name, readImage(imagePath + file.getName()));
             }
         }
     }

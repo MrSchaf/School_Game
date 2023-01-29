@@ -1,6 +1,7 @@
 package code.Calc.Game.World;
 
 import code.Calc.Game.Objects.Object;
+import code.Calc.Game.Objects.Object_Images.Images;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 
 import java.util.Hashtable;
@@ -11,6 +12,7 @@ public class World_Display_Objects {
     private Resolution resolution;
     private double scale;
     private World world;
+    private final Images images;
     private final int tileSize;
 
     Hashtable<String, Vector<Object>> objects;
@@ -22,6 +24,7 @@ public class World_Display_Objects {
         this.scale = scale;
         this.tileSize = world.getTileSize();
         this.world = world;
+        this.images = world.getImages();
         this.coordinate = coordinate;
 
         this.objects = new Hashtable<>();
@@ -54,9 +57,12 @@ public class World_Display_Objects {
 
         for (World_Chunk world_chunk : chunkVector) {
             for (int j = 0; j < world_chunk.getTiles().length; j++) {
-                if (world_chunk.getTiles()[j].intersects(min, max)) {
-                    tileVector.add(world_chunk.getTiles()[j]);
+                for (int i = 0; i < world_chunk.getTiles()[j].length; i++) {
+                    if (world_chunk.getTiles()[j][i].intersects(min, max)) {
+                        tileVector.add(world_chunk.getTiles()[j][i]);
+                    }
                 }
+
             }
         }
 
@@ -114,5 +120,9 @@ public class World_Display_Objects {
 
     public Coordinate getCoordinate() {
         return coordinate;
+    }
+
+    public Images getImages() {
+        return images;
     }
 }
