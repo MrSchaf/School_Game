@@ -92,4 +92,8 @@ public class Coordinate {
     public void setY(int y) {
         this.y = y;
     }
+
+    public String toString(){
+        return "Coordinate(X=" + x + ",Y=" + y + ")";
+    }
 }

@@ -1,10 +1,14 @@
 package code.Calc.Game.World;
 
+import code.Calc.Actions.Action_Listener;
 import code.Calc.Game.Objects.Hitbox.HitBox;
 import code.Calc.Game.Objects.Object;
 import code.Calc.Game.Objects.Object_Images.Images;
 import code.Calc.Game.Player.Player;
 import code.Calc.Game.World.Generation.Generation;
+import code.Calc.Game.World.Generation.Generation_NoGen;
+import code.Game;
+import code.IO.InPut.In_Keyboard.Keyboard_Key;
 
 import java.awt.*;
 import java.util.Hashtable;
@@ -16,18 +20,20 @@ public class World {
     private final int chunkSize;
     private final int tileSize;
     private final Images images;
-    private final Generation generation;
+    private Generation generation;
+    private final Game game;
 
     private final Player player;
 
     private Hashtable<String, Object> entities;
     private Hashtable<Coordinate, World_Chunk> chunks;
 
-    public World(int chunkSize, int tileSize, Generation generation, Images images) {
+    public World(int chunkSize, int tileSize, Generation generation, Images images, Game game) {
         this.seed = getSeed();
         this.chunkSize = chunkSize;
         this.tileSize = tileSize;
-        this.generation = generation;
+        this.generation = new Generation_NoGen(chunkSize);
+        this.game = game;
         this.images = images;
 
         this.player = new Player("Player", new Coordinate(0, 0), new HitBox(new Rectangle(10, 10), new Coordinate(0,0), 0), "player", this);
@@ -91,7 +97,7 @@ public class World {
     }
 
     public void tick(){
-
+        player.tick();
     }
 
     public int getSeed() {
@@ -112,5 +118,9 @@ public class World {
 
     public Images getImages() {
         return images;
+    }
+
+    public void addKeyListener(Action_Listener action_listener, Keyboard_Key key){
+        game.addKeyListener(action_listener, key);
     }
 }

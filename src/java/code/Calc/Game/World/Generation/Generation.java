@@ -1,6 +1,5 @@
 package code.Calc.Game.World.Generation;
 
-
 import code.Calc.Game.Objects.Hitbox.HitBox;
 import code.Calc.Game.Objects.Object_Images.Images;
 import code.Calc.Game.World.Coordinate;

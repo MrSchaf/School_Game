@@ -11,11 +11,17 @@ public class Moving_Object extends World_Object {
 
     public Moving_Object(Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, String image) {
         super(coordinate, hitBox, rotation, solid, image);
+        vel = new Math_Vector(0, 0, true);
+        delta = 1;
     }
 
-    public void move(double delta) {
-        this.delta = delta;
+    public void move() {
         Coordinate newCoords = getCoordinate();
+        newCoords.setX((int) (newCoords.getX() + vel.getX() * delta));
+        newCoords.setY((int) (newCoords.getY() + vel.getY() * delta));
+        HitBox newHitBox = getHitBox();
+        newHitBox.setReference(newCoords);
+
 
     }
 
@@ -33,6 +39,14 @@ public class Moving_Object extends World_Object {
 
     public double getDelta() {
         return delta;
+    }
+
+    public void addVel(Math_Vector vel) {
+        this.vel.add(vel);
+    }
+
+    public void subVel(Math_Vector vel) {
+        this.vel.subtract(vel);
     }
 
     public void setVel(Math_Vector vel) {

@@ -16,7 +16,7 @@ public class Calc {
         this.game = game;
         clock = new Clock(game, tps, fps);
         images = new Images("src/resources/files/images/Objects/");
-        world = new World(chunkSize, tileSize, null, images);
+        world = new World(chunkSize, tileSize, null, images, game);
     }
 
     public World getWorld() {

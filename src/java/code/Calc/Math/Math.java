@@ -1,6 +1,10 @@
 package code.Calc.Math;
 
 public class Math {
+    public static final Math_Vector UP = new Math_Vector(0, -1, true);
+    public static final Math_Vector DOWN = new Math_Vector(0, 1, true);
+    public static final Math_Vector LEFT = new Math_Vector(-1, 0, true);
+    public static final Math_Vector RIGHT = new Math_Vector(1, 0, true);
 
     public static double sqrt(double v) {
         return java.lang.Math.sqrt(v);

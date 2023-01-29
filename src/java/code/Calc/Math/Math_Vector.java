@@ -5,8 +5,7 @@ public class Math_Vector {
     private double length;
     private double angle;
 
-    /**
-     * <p><strong>form = true</strong><br />Components<br />a = x<br />b = y</p>
+    /**<p><strong>form = true</strong><br />Components<br />a = x<br />b = y</p>
      * <br />
      * <p><strong>form = false</strong><br />Magnitude and direction<br />a = length<br />b = angle</p>
      * **/

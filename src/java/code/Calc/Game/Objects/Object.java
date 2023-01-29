@@ -3,8 +3,6 @@ package code.Calc.Game.Objects;
 import code.Calc.Game.Objects.Hitbox.HitBox;
 import code.Calc.Game.World.Coordinate;
 
-import java.awt.*;
-
 public abstract class Object {
     protected Coordinate coordinate;
     private final HitBox hitBox;
@@ -34,7 +32,7 @@ public abstract class Object {
         return hitBox.intersects(object.getHitBox());
     }
 
-    private HitBox getHitBox() {
+    protected HitBox getHitBox() {
         return this.hitBox;
     }
 

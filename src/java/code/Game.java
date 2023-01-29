@@ -3,6 +3,7 @@ package code;
 import code.Calc.Actions.Action_Listener;
 import code.Calc.Calc;
 import code.IO.InPut.In_Keyboard.In_KeyListener;
+import code.IO.InPut.In_Keyboard.Keyboard_Key;
 import code.IO.InPut.In_Keyboard.Keyboard_Keys;
 import code.IO.OutPut.Out;
 import code.IO.InPut.In;
@@ -29,7 +30,7 @@ public class Game {
                 }
             }
         };
-        in.getKeyboard().addKeyListener(action_listener, Keyboard_Keys.Key_F11);
+        addKeyListener(action_listener, Keyboard_Keys.Key_F11);
 
         Action_Listener action_listener2 = new Action_Listener() {
             @Override
@@ -39,9 +40,10 @@ public class Game {
                 }
             }
         };
-        in.getKeyboard().addKeyListener(action_listener2, Keyboard_Keys.Key_F10);
-
-        start();
+        addKeyListener(action_listener2, Keyboard_Keys.Key_F10);
+        // start();
+        tick();
+        frame();
     }
 
     // Initializations
@@ -50,8 +52,8 @@ public class Game {
         int fps = 60;
         int chunkSize = 16;
         int tileSize = 10;
-        initCalc(tps, fps, chunkSize, tileSize, new Generation_NoGen(chunkSize));
         initInput();
+        initCalc(tps, fps, chunkSize, tileSize, new Generation_NoGen(chunkSize));
         initOutput();
     }
 
@@ -96,5 +98,9 @@ public class Game {
 
     public In_KeyListener getKeyListener(){
         return in.getKeyListener();
+    }
+
+    public void addKeyListener(Action_Listener keyListener, Keyboard_Key key){
+        in.getKeyboard().addKeyListener(keyListener, key);
     }
 }

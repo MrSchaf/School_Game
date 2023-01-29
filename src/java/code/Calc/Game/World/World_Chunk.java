@@ -20,23 +20,23 @@ public class World_Chunk {
     }
 
     public Coordinate getCoordinate() {
-        return coordinate;
+        return new Coordinate(getX(), getY());
     }
 
     public int getX() {
-        return coordinate.getX();
+        return coordinate.getX() * width;
     }
 
     public int getY() {
-        return coordinate.getY();
+        return coordinate.getY() * height;
     }
 
     public int getWidth() {
-        return width;
+        return width * width;
     }
 
     public int getHeight() {
-        return height;
+        return height * height;
     }
 
     public World_Tile[][] getTiles(){
@@ -95,8 +95,9 @@ public class World_Chunk {
     }
 
     public boolean intersects(Coordinate max, Coordinate min){
-        Coordinate chunkMin = coordinate;
+        Coordinate chunkMin = getCoordinate();
         Coordinate chunkMax = new Coordinate((coordinate.getX() + width), (coordinate.getY() + height));
+        System.out.println(chunkMin.getX() + " " + chunkMin.getY() + " " + chunkMax.getX() + " " + chunkMax.getY());
         if (chunkMin.toBottomRight(min) && chunkMin.toTopLeft(max)) {
             return true;
         } else if(chunkMax.toBottomRight(min) && chunkMax.toTopLeft(max)){

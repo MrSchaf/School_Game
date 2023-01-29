@@ -1,6 +1,5 @@
 package code.IO.OutPut.Graphics.Graphics_Image;
 
-
 import code.Calc.Game.Objects.Object;
 import code.Calc.Game.Objects.Object_Images.Images;
 import code.Calc.Game.World.World_Display_Objects;
