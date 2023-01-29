@@ -1,5 +1,6 @@
 package code.IO.OutPut.Graphics;
 
+import code.IO.InPut.In_Keyboard.In_KeyListener;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Graphics.Panels.Graphics_Panel;
 
@@ -23,7 +24,7 @@ public class Graphics_ContentPane {
     }
 
     public void paint(){
-        System.out.println("Panel: " + currentPanel.getSize().getWidth() + " " + currentPanel.getSize().getHeight());
+        // System.out.println("Panel: " + currentPanel.getSize().getWidth() + " " + currentPanel.getSize().getHeight());
         currentPanel.paint();
         contentPane.repaint();
     }
@@ -69,6 +70,18 @@ public class Graphics_ContentPane {
         this.resolution = resolution;
         for (String name : panels.keySet()) {
             panels.get(name).setSize(resolution);
+        }
+    }
+
+    public void addKeyListener(In_KeyListener actionListener){
+        for (String name : panels.keySet()) {
+            panels.get(name).addKeyListener(actionListener);
+        }
+    }
+
+    public void requestFocus(){
+        for (String name: panels.keySet()){
+            panels.get(name).requestFocus();
         }
     }
 }

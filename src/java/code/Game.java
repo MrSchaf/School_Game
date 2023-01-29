@@ -25,13 +25,13 @@ public class Game {
             @Override
             protected void actionPerformed(int code) {
                 if (code == 1) {
-                    System.out.println("E pressed");
-                } else if (code == 0) {
-                    System.out.println("E released");
+                    out.changeFullscreen();
                 }
             }
         };
         in.getKeyboard().addKeyListener(action_listener, Keyboard_Keys.Key_E);
+
+        start();
     }
 
     // Initializations
@@ -67,6 +67,7 @@ public class Game {
     }
 
     public void tick(){
+        in.tick();
         calc.getWorld().tick();
     }
 

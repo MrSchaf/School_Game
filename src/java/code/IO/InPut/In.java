@@ -18,4 +18,8 @@ public class In {
     public In_KeyListener getKeyListener() {
         return keyboard.getKeyListener();
     }
+
+    public void tick(){
+        keyboard.tick();
+    }
 }

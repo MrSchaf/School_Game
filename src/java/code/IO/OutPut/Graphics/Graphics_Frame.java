@@ -2,6 +2,7 @@ package code.IO.OutPut.Graphics;
 
 import code.Calc.Game.World.World;
 import code.Game;
+import code.IO.InPut.In_Keyboard.In_KeyListener;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 import code.IO.OutPut.Graphics.Panels.Game_Panel;
 import code.IO.OutPut.Graphics.Panels.Menu_Panel;
@@ -27,6 +28,7 @@ public class Graphics_Frame {
         this.title = title;
         this.world = world;
         this.game = game;
+        this.devices = devices;
 
         fullScreen = false;
         preferredSize = size;
@@ -35,6 +37,8 @@ public class Graphics_Frame {
         initPanel();
 
         frame.setVisible(true);
+        contentPane.requestFocus();
+        addKeyListener(game.getKeyListener());
     }
 
     private void initFrame(){
@@ -42,7 +46,6 @@ public class Graphics_Frame {
         frame.setSize(size.getWidth(), size.getHeight());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-
     }
 
     private void initPanel(){
@@ -54,13 +57,13 @@ public class Graphics_Frame {
         frame.setContentPane(contentPane.getContainer());
     }
 
-    public void addActionListeners(List actionListeners){
-        frame.addKeyListener(game.getKeyListener());
+    public void addKeyListener(In_KeyListener actionListener){
+        contentPane.addKeyListener(actionListener);
     }
 
     public void frame(){
         setSize(new Resolution(frame.getWidth(), frame.getHeight()));
-        System.out.println("Frame: " + frame.getWidth() + " " + frame.getHeight());
+        // System.out.println("Frame: " + frame.getWidth() + " " + frame.getHeight());
         contentPane.paint();
         frame.repaint();
 
@@ -76,22 +79,38 @@ public class Graphics_Frame {
     }
 
     public void changeFullscreen(){
-
         if(fullScreen){
+            System.out.println("Windowed");
             setWindowed();
+            fullScreen = false;
         } else {
+            System.out.println("Fullscreen");
             preferredSize = size;
             setFullscreen();
+            fullScreen = true;
         }
 
     }
 
     public void setFullscreen(){
-        System.out.println("Fullscreen");
+        GraphicsDevice device = devices.getDefaultScreenDevice();
+        if (device.isFullScreenSupported()) {
+            frame.dispose();
+            frame.setUndecorated(true);
+            device.setFullScreenWindow(frame);
+            frame.validate();
+            contentPane.requestFocus();
+        }
     }
 
     public void setWindowed(){
-        System.out.println("Windowed");
+        GraphicsDevice device = devices.getDefaultScreenDevice();
+        device.setFullScreenWindow(null);
+        frame.dispose();
+        frame.setUndecorated(false);
+        frame.setSize(preferredSize.getWidth(), preferredSize.getHeight());
+        frame.setVisible(true);
+        contentPane.requestFocus();
     }
 
     public JFrame getFrame(){

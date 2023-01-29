@@ -15,13 +15,14 @@ public class Out {
     private String title;
     private final Graphics_Frame graphics;
 
-    private static final GraphicsEnvironment devices = GraphicsEnvironment.getLocalGraphicsEnvironment();
+    private final GraphicsEnvironment devices;
 
     public Out(Game game, In in, Resolution resolution, String title){
         this.game = game;
         this.in = in;
         this.resolution = resolution;
         this.title = title;
+        devices = GraphicsEnvironment.getLocalGraphicsEnvironment();
         graphics = new Graphics_Frame(resolution, title, game.getWorld(), devices, game);
     }
 

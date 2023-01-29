@@ -1,7 +1,6 @@
 package code.IO.InPut.In_Keyboard;
 
 import code.Calc.Actions.Action_Listener;
-import code.IO.InPut.In_Mouse.In_MouseListener;
 
 import java.awt.event.KeyEvent;
 import java.util.Objects;
@@ -115,20 +114,26 @@ public class Keyboard_Keys {
     }
 
     public void tick(){
+        Vector<Keyboard_Key> releasedKeys = new Vector<>();
+
         for(Keyboard_Key key : pressedKeys){
             key.keyPressed();
             if(!key.isPressed()){
-                removePressedKey(key);
+                key.keyReleased();
+                releasedKeys.add(key);
             }
+        }
+
+        for (Keyboard_Key key : releasedKeys) {
+            removePressedKey(key);
         }
     }
 
     public void setPressedKey(boolean pressed, int keyCode){
         Objects.requireNonNull(getKey(keyCode)).setPressed(pressed);
+        // System.out.println("Key: " + getKey(keyCode).getName() + " pressed: " + pressed);
         if(pressed) {
             addPressedKey(getKey(keyCode));
-        } else {
-            removePressedKey(getKey(keyCode));
         }
     }
 

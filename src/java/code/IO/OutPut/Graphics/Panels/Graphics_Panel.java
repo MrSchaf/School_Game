@@ -1,5 +1,6 @@
 package code.IO.OutPut.Graphics.Panels;
 
+import code.IO.InPut.In_Keyboard.In_KeyListener;
 import code.IO.OutPut.Graphics.Graphics_Image.Image;
 import code.IO.OutPut.Graphics.Graphics_Image.Image_Paint;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
@@ -50,5 +51,13 @@ public class Graphics_Panel {
 
     public void setImage(Image image) {
         this.image = image;
+    }
+
+    public void addKeyListener(In_KeyListener actionListener){
+        panel.addKeyListener(actionListener);
+    }
+
+    public void requestFocus(){
+        panel.requestFocusInWindow();
     }
 }
