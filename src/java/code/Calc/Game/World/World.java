@@ -68,16 +68,16 @@ public class World {
         int x = coordinate.getX();
         int y = coordinate.getY();
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = -2; i < 2; i++) {
+            for (int j = -2; j < 2; j++) {
                 addChunk(new Coordinate(x + i, y + j));
             }
         }
     }
 
     public void addChunk(Coordinate coordinate){
-        World_Chunk chunk = generation.generateChunk(coordinate, chunkSize, tileSize, seed, images);
         if(!chunks.containsKey(coordinate)){
+            World_Chunk chunk = generation.generateChunk(coordinate, chunkSize, tileSize, seed, images);
             chunks.put(coordinate, chunk);
         }
     }

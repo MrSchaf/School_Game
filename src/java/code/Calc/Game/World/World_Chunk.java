@@ -10,13 +10,11 @@ public class World_Chunk {
 
     private World_Tile[][] tiles;
 
-    public World_Chunk(Coordinate coordinate, int width, int height, Images images) {
-        this.coordinate = coordinate;
-        this.width = width;
-        this.height = height;
+    public World_Chunk(Coordinate coordinate, int width, int height, int tileSize, Images images) {
+        this.coordinate = new Coordinate(coordinate.getX() * width * tileSize, coordinate.getY() * height * tileSize);
+        this.width = width * tileSize;
+        this.height = height * tileSize;
         tiles = new World_Tile[width][height];
-        int x = coordinate.getX();
-        int y = coordinate.getY();
     }
 
     public Coordinate getCoordinate() {
@@ -24,19 +22,19 @@ public class World_Chunk {
     }
 
     public int getX() {
-        return coordinate.getX() * width;
+        return coordinate.getX();
     }
 
     public int getY() {
-        return coordinate.getY() * height;
+        return coordinate.getY();
     }
 
     public int getWidth() {
-        return width * width;
+        return width;
     }
 
     public int getHeight() {
-        return height * height;
+        return height;
     }
 
     public World_Tile[][] getTiles(){
@@ -98,9 +96,9 @@ public class World_Chunk {
         Coordinate chunkMin = getCoordinate();
         Coordinate chunkMax = new Coordinate((coordinate.getX() + width), (coordinate.getY() + height));
         System.out.println(chunkMin.getX() + " " + chunkMin.getY() + " " + chunkMax.getX() + " " + chunkMax.getY());
-        if (chunkMin.toBottomRight(min) && chunkMin.toTopLeft(max)) {
+        if (chunkMin.toBottomRight(max) && chunkMin.toTopLeft(min)) {
             return true;
-        } else if(chunkMax.toBottomRight(min) && chunkMax.toTopLeft(max)){
+        } else if(chunkMax.toBottomRight(max) && chunkMax.toTopLeft(min)){
             return true;
         }
         return false;

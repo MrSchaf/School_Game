@@ -41,6 +41,7 @@ public class Game {
             }
         };
         addKeyListener(action_listener2, Keyboard_Keys.Key_F10);
+
         // start();
         tick();
         frame();
@@ -57,8 +58,8 @@ public class Game {
         initOutput();
     }
 
-    private void initCalc(int tps, int fps, int chunkSize, int tileSize_Ratio, Generation generation){
-        calc = new Calc(this, tps, fps, chunkSize, tileSize_Ratio);
+    private void initCalc(int tps, int fps, int chunkSize, int tileSize, Generation generation){
+        calc = new Calc(this, tps, fps, chunkSize, tileSize);
     }
 
     private void initInput(){

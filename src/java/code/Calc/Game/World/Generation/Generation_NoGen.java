@@ -10,10 +10,8 @@ public class Generation_NoGen extends Generation {
     public void genTerrain(int x, int y) {
         for (int[] a : map) {
             for (int b : a){
-                y = 0;
+                b = 0;
             }
         }
-
-        map[x][y] = 0;
     }
 }
