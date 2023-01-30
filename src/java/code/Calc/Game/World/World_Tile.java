@@ -10,12 +10,14 @@ public class World_Tile extends World_Object {
 
     private final ArrayList<World_Object> objects;
 
-    public World_Tile(Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, int tileSize, String image, int height) {
-        super(coordinate, hitBox, rotation, solid, image);
+    public World_Tile(Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, int tileSize, String image, int height, World world) {
+        super(coordinate, hitBox, rotation, solid, image, world);
         this.height = height;
         objects = new ArrayList<>();
-
-        objects.add(new Floor_Tile(coordinate, tileSize, height));
+        if(height > 0){
+            setSolid(true);
+        }
+        objects.add(new Floor_Tile(coordinate, tileSize, height, world));
     }
 
     public int getHeight() {

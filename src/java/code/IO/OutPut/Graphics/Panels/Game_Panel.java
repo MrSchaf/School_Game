@@ -33,4 +33,8 @@ public class Game_Panel extends Graphics_Panel {
 
        super.paint();
     }
+
+    public void setCamera(Coordinate coordinate){
+        worldObjects.setMiddle(coordinate);
+    }
 }

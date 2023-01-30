@@ -5,6 +5,7 @@ import code.Calc.Actions.Action_Listener;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Vector;
 
 public class Keyboard_Keys {
@@ -131,6 +132,7 @@ public class Keyboard_Keys {
 
     public void setPressedKey(boolean pressed, int keyCode){
         if(containsKey(keyCode)){
+            Objects.requireNonNull(getKey(keyCode)).setPressed(pressed);
             if(pressed) {
                 addPressedKey(getKey(keyCode));
             }

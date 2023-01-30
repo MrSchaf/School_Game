@@ -1,7 +1,9 @@
 package code.IO.OutPut.Graphics;
 
+import code.Calc.Game.World.Coordinate;
 import code.IO.InPut.In_Keyboard.In_KeyListener;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
+import code.IO.OutPut.Graphics.Panels.Game_Panel;
 import code.IO.OutPut.Graphics.Panels.Graphics_Panel;
 
 import javax.swing.*;
@@ -81,6 +83,12 @@ public class Graphics_ContentPane {
     public void requestFocus(){
         for (String name: panels.keySet()){
             panels.get(name).requestFocus();
+        }
+    }
+
+    public void setCamera(Coordinate coordinate){
+        if (currentPanel instanceof Game_Panel) {
+            ((Game_Panel) currentPanel).setCamera(coordinate);
         }
     }
 }

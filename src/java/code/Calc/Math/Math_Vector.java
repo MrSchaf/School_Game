@@ -106,6 +106,26 @@ public class Math_Vector {
         return x * v.getY() - y * v.getX();
     }
 
+    public int getDirX() {
+        if(x > 0) {
+            return 1;
+        } else if(x < 0) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    public int getDirY() {
+        if(y > 0) {
+            return 1;
+        } else if(y < 0) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
     public double getY() {
         return y;
     }
@@ -136,5 +156,9 @@ public class Math_Vector {
 
     public void setAngle(double angle) {
         this.angle = angle;
+    }
+
+    public String toString() {
+        return "Vector: (" + x + ", " + y + ")";
     }
 }

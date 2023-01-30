@@ -4,7 +4,9 @@ import code.Calc.Game.Objects.Object;
 import code.Calc.Game.Objects.Object_Images.Images;
 import code.Calc.Game.World.World_Display_Objects;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
 import java.util.Vector;
 
 public class Image_Paint {
@@ -16,18 +18,30 @@ public class Image_Paint {
         Vector<Object> tiles = worldObjects.getTiles();
         Vector<Object> entities = worldObjects.getEntities();
 
-        for (Object tile : tiles) {
-            String img = tile.getImage();
-            int x = tile.getCoordinate().getX() + worldObjects.getMiddleX();
-            int y = tile.getCoordinate().getY() + worldObjects.getMiddleY();
-            g.drawImage(images.getImage(img), x, y, null);
-        }
+        draw(worldObjects, g, images, tiles);
 
-        for (Object entity : entities) {
-            String img = entity.getImage();
-            g.drawImage(images.getImage(img), entity.getCoordinate().getX(), entity.getCoordinate().getY(), null);
+        draw(worldObjects, g, images, entities);
+
+        File file = new File("src/resources/files/images/World.png");
+        try {
+            ImageIO.write(image.getImage(), "png", file);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return image;
+    }
+
+    private static void draw(World_Display_Objects worldObjects, Graphics g, Images images, Vector<Object> objects) {
+        for (Object object : objects) {
+            drawObject(g, images, object, worldObjects.getMiddleX(), worldObjects.getMiddleY());
+        }
+    }
+
+    private static void drawObject(Graphics g, Images images, Object object, int middleX, int middleY) {
+        String img = object.getImage();
+        int x = object.getCoordinate().getX() + middleX;
+        int y = object.getCoordinate().getY() + middleY;
+        g.drawImage(images.getImage(img), x, y, null);
     }
 }

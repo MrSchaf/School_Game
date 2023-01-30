@@ -2,19 +2,24 @@ package code.Calc.Game.World;
 
 import code.Calc.Game.Objects.Object;
 import code.Calc.Game.Objects.Object_Images.Images;
+import code.Calc.Math.Math;
 
 public class World_Chunk {
     private Coordinate coordinate;
-    private int width;
-    private int height;
+    private final int chunkSize;
+    private final int size;
 
     private World_Tile[][] tiles;
 
-    public World_Chunk(Coordinate coordinate, int width, int height, int tileSize, Images images) {
-        this.coordinate = new Coordinate(coordinate.getX() * width * tileSize, coordinate.getY() * height * tileSize);
-        this.width = width * tileSize;
-        this.height = height * tileSize;
-        tiles = new World_Tile[width][height];
+    public World_Chunk(){
+        this(new Coordinate(0, 0), 0, 0, null);
+    }
+
+    public World_Chunk(Coordinate coordinate, int chunkSize, int tileSize, Images images) {
+        this.coordinate = new Coordinate(coordinate.getX(), coordinate.getY());
+        this.chunkSize = chunkSize;
+        this.size = chunkSize * tileSize;
+        tiles = new World_Tile[chunkSize][chunkSize];
     }
 
     public Coordinate getCoordinate() {
@@ -29,12 +34,12 @@ public class World_Chunk {
         return coordinate.getY();
     }
 
-    public int getWidth() {
-        return width;
+    public int getChunkSize(){
+        return chunkSize;
     }
 
-    public int getHeight() {
-        return height;
+    public int getSize(){
+        return size;
     }
 
     public World_Tile[][] getTiles(){
@@ -61,14 +66,6 @@ public class World_Chunk {
         this.coordinate.setY(y);
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
     public void setTiles(World_Tile[][] tiles){
         this.tiles = tiles;
     }
@@ -84,7 +81,7 @@ public class World_Chunk {
     public boolean collides(Object object) {
         for (World_Tile[] slice : tiles) {
             for (World_Tile tile: slice) {
-                if (tile != null && tile.intersects(object)) {
+                if (tile != null && tile.intersects(object) && tile.isSolid()) {
                     return true;
                 }
             }
@@ -92,16 +89,29 @@ public class World_Chunk {
         return false;
     }
 
-    public boolean intersects(Coordinate min, Coordinate max){
+    public boolean intersects(Coordinate min, Coordinate max) {
+        boolean intersects;
+
         Coordinate chunkMin = getCoordinate();
-        Coordinate chunkMax = new Coordinate((coordinate.getX() + width), (coordinate.getY() + height));
-        if(chunkMin.getX() < max.getX() && chunkMax.getX() > min.getX() && chunkMin.getY() < max.getY() && chunkMax.getY() > min.getY()){
-            return true;
-        }
-        return false;
+        Coordinate chunkMax = new Coordinate((coordinate.getX() + size), (coordinate.getY() + size));
+
+        intersects = Math.intersects(min, max, chunkMin, chunkMax);
+
+        return intersects;
     }
 
     public void setTile(int x, int y, World_Tile tile) {
         tiles[x][y] = tile;
+    }
+
+    public boolean intersects(Object object) {
+        boolean intersects;
+
+        Coordinate chunkMin = getCoordinate();
+        Coordinate chunkMax = new Coordinate((coordinate.getX() + size), (coordinate.getY() + size));
+
+        intersects = object.intersects(chunkMin, chunkMax);
+
+        return intersects;
     }
 }

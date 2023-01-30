@@ -1,5 +1,6 @@
 package code.IO.OutPut.Graphics;
 
+import code.Calc.Game.World.Coordinate;
 import code.Calc.Game.World.World;
 import code.Game;
 import code.IO.InPut.In_Keyboard.In_KeyListener;
@@ -150,5 +151,9 @@ public class Graphics_Frame {
         } else if(contentPane.getCurrentPanelName().equals("Menu")) {
             contentPane.setCurrentPanel("Game");
         }
+    }
+
+    public void setCamera(Coordinate coordinate){
+        contentPane.setCamera(coordinate);
     }
 }

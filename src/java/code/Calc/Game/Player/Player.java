@@ -18,10 +18,9 @@ public class Player extends Moving_Object {
     private final Hashtable<String, Action_Listener> actions;
 
     public Player(String name, Coordinate coordinate, HitBox hitBox, String image, World world) {
-        super(coordinate, hitBox, 0, false, image);
+        super(coordinate, hitBox, 0, false, image, world);
         this.name = name;
         this.world = world;
-
 
         actions = new Hashtable<>();
         initActions();
@@ -92,5 +91,10 @@ public class Player extends Moving_Object {
     public void tick() {
         generateChunks();
         move();
+//        setCamera();
+    }
+
+    public void setCamera(){
+        world.setCamera(coordinate);
     }
 }

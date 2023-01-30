@@ -2,14 +2,13 @@ package code;
 
 import code.Calc.Actions.Action_Listener;
 import code.Calc.Calc;
+import code.Calc.Game.World.Coordinate;
 import code.IO.InPut.In_Keyboard.In_KeyListener;
 import code.IO.InPut.In_Keyboard.Keyboard_Key;
 import code.IO.InPut.In_Keyboard.Keyboard_Keys;
 import code.IO.OutPut.Out;
 import code.IO.InPut.In;
 import code.Calc.Clock.Clock;
-import code.Calc.Game.World.Generation.Generation;
-import code.Calc.Game.World.Generation.Generation_NoGen;
 import code.Calc.Game.World.World;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 
@@ -42,9 +41,7 @@ public class Game {
         };
         addKeyListener(action_listener2, Keyboard_Keys.Key_F10);
 
-//        start();
-        tick();
-        frame();
+        start();
     }
 
     // Initializations
@@ -54,11 +51,11 @@ public class Game {
         int chunkSize = 16;
         int tileSize = 10;
         initInput();
-        initCalc(tps, fps, chunkSize, tileSize, new Generation_NoGen(chunkSize));
+        initCalc(tps, fps, chunkSize, tileSize);
         initOutput();
     }
 
-    private void initCalc(int tps, int fps, int chunkSize, int tileSize, Generation generation){
+    private void initCalc(int tps, int fps, int chunkSize, int tileSize){
         calc = new Calc(this, tps, fps, chunkSize, tileSize);
     }
 
@@ -103,5 +100,10 @@ public class Game {
 
     public void addKeyListener(Action_Listener keyListener, Keyboard_Key key){
         in.getKeyboard().addKeyListener(keyListener, key);
+    }
+
+    public void setCamera(Coordinate camera){
+        out.setCamera(camera);
+        System.out.println("Camera set to: " + camera);
     }
 }

@@ -17,7 +17,6 @@ public class In_KeyListener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
-        System.out.println(code);
         keyboardKeys.setPressedKey(true, code);
     }
 

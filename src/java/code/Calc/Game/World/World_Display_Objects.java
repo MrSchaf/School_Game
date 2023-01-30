@@ -125,6 +125,16 @@ public class World_Display_Objects {
 
     public void setCoordinate(Coordinate coordinate) {
         this.coordinate = coordinate;
+        int x = coordinate.getX() + (resolution.getWidth() / 2);
+        int y = coordinate.getY() + (resolution.getHeight() / 2);
+        this.middle = new Coordinate(x, y);
+    }
+
+    public void setMiddle(Coordinate middle) {
+        this.middle = middle;
+        int x = middle.getX() - (resolution.getWidth() / 2);
+        int y = middle.getY() - (resolution.getHeight() / 2);
+        this.coordinate = new Coordinate(x, y);
     }
 
     public Coordinate getCoordinate() {

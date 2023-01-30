@@ -93,6 +93,18 @@ public class Coordinate {
         this.y = y;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        boolean same = false;
+        if (obj instanceof Coordinate) {
+            same = this.getX() == ((Coordinate) obj).getX();
+            if(this.getY() != ((Coordinate) obj).getY()){
+                same = false;
+            }
+        }
+        return same;
+    }
+
     public String toString(){
         return "Coordinate(X=" + x + ",Y=" + y + ")";
     }

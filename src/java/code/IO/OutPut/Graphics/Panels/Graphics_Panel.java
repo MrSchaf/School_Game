@@ -1,6 +1,7 @@
 package code.IO.OutPut.Graphics.Panels;
 
 import code.IO.InPut.In_Keyboard.In_KeyListener;
+import code.IO.OutPut.Graphics.Graphics_ContentPane;
 import code.IO.OutPut.Graphics.Graphics_Image.Image;
 import code.IO.OutPut.Graphics.Graphics_Game.Game_Image.Resolution;
 

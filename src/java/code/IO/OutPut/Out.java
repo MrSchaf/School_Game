@@ -1,5 +1,6 @@
 package code.IO.OutPut;
 
+import code.Calc.Game.World.Coordinate;
 import code.Game;
 import code.IO.InPut.In;
 import code.IO.OutPut.Graphics.Graphics_Frame;
@@ -36,5 +37,9 @@ public class Out {
 
     public void changePanel(){
         graphics.changePanel();
+    }
+
+    public void setCamera(Coordinate camera){
+        graphics.setCamera(camera);
     }
 }
