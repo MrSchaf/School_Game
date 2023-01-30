@@ -10,8 +10,9 @@ import java.util.Vector;
 public class World_Display_Objects {
     private Coordinate coordinate;
     private Resolution resolution;
+    private Coordinate middle;
     private double scale;
-    private World world;
+    private final World world;
     private final Images images;
     private final int tileSize;
 
@@ -21,11 +22,12 @@ public class World_Display_Objects {
 
     public World_Display_Objects(Resolution resolution, double scale, World world, Coordinate coordinate){
         this.resolution = resolution;
+        this.coordinate = coordinate;
+        this.middle = new Coordinate(resolution.getWidth() / 2, resolution.getHeight() / 2);
         this.scale = scale;
         this.tileSize = world.getTileSize();
         this.world = world;
         this.images = world.getImages();
-        this.coordinate = coordinate;
 
         this.objects = new Hashtable<>();
         this.entities = new Vector<>();
@@ -45,14 +47,14 @@ public class World_Display_Objects {
         Coordinate max = new Coordinate(maxX, maxY);
 
         Vector<Object> entityVector = world.getEntities();
-        this.entities = getEntities(entityVector, min, max);
+        this.entities = setEntities(entityVector, min, max);
 
         Vector<World_Chunk> chunkVector = world.getChunks();
-        tiles = getTiles(chunkVector, min, max);
+        this.tiles = setTiles(chunkVector, min, max);
     }
 
-    public Vector<Object> getTiles(Vector<World_Chunk> chunks, Coordinate min, Coordinate max) {
-        Vector<World_Chunk> chunkVector = getChunks(chunks, min, max);
+    public Vector<Object> setTiles(Vector<World_Chunk> chunks, Coordinate min, Coordinate max) {
+        Vector<World_Chunk> chunkVector = setChunks(chunks, min, max);
         Vector<Object> tileVector = new Vector<>();
 
         for (World_Chunk world_chunk : chunkVector) {
@@ -62,14 +64,13 @@ public class World_Display_Objects {
                         tileVector.add(world_chunk.getTiles()[j][i]);
                     }
                 }
-
             }
         }
 
         return tileVector;
     }
 
-    public Vector<World_Chunk> getChunks(Vector<World_Chunk> chunks, Coordinate min, Coordinate max){
+    public Vector<World_Chunk> setChunks(Vector<World_Chunk> chunks, Coordinate min, Coordinate max){
         Vector<World_Chunk> chunkVector = new Vector<>();
 
         for (int i = 0; i < chunks.size(); i++) {
@@ -81,7 +82,7 @@ public class World_Display_Objects {
         return chunkVector;
     }
 
-    public Vector<Object> getEntities(Vector<Object> entities, Coordinate min, Coordinate max){
+    public Vector<Object> setEntities(Vector<Object> entities, Coordinate min, Coordinate max){
         Vector<Object> entityVector = new Vector<>();
 
         for (int i = 0; i < entities.size(); i++) {
@@ -96,6 +97,14 @@ public class World_Display_Objects {
 
     public Hashtable<String, Vector<Object>> getObjects() {
         return objects;
+    }
+
+    public Vector<Object> getEntities() {
+        return entities;
+    }
+
+    public Vector<Object> getTiles() {
+        return tiles;
     }
 
     public Resolution getResolution() {
@@ -120,6 +129,18 @@ public class World_Display_Objects {
 
     public Coordinate getCoordinate() {
         return coordinate;
+    }
+
+    public Coordinate getMiddle() {
+        return middle;
+    }
+
+    public int getMiddleX() {
+        return middle.getX();
+    }
+
+    public int getMiddleY() {
+        return middle.getY();
     }
 
     public Images getImages() {

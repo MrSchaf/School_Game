@@ -10,7 +10,7 @@ public abstract class Object {
 
     private String name;
 
-    public Object(int x, int y,HitBox hitBox, double rotation, String name) {
+    public Object(int x, int y, HitBox hitBox, double rotation, String name) {
         coordinate = new Coordinate(x, y);
         this.hitBox = hitBox;
         this.rotation = rotation;

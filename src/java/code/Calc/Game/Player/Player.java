@@ -6,7 +6,6 @@ import code.Calc.Game.Objects.Moving_Object;
 import code.Calc.Game.World.Coordinate;
 import code.Calc.Game.World.World;
 import code.Calc.Math.Math;
-import code.IO.InPut.In_Keyboard.Keyboard_Key;
 import code.IO.InPut.In_Keyboard.Keyboard_Keys;
 
 import java.util.Hashtable;
@@ -22,6 +21,7 @@ public class Player extends Moving_Object {
         super(coordinate, hitBox, 0, false, image);
         this.name = name;
         this.world = world;
+
 
         actions = new Hashtable<>();
         initActions();

@@ -36,8 +36,8 @@ public abstract class Generation {
         genTerrain(chunkSize, chunkSize);
         for (int x = 0; x < chunkSize; x++) {
             for (int y = 0; y < chunkSize; y++) {
-                int coordinateX = coordinate.getX();
-                int coordinateY = coordinate.getY();
+                int coordinateX = coordinate.getX() + x * tileSize;
+                int coordinateY = coordinate.getY() + y * tileSize;
                 World_Tile tile = new World_Tile(new Coordinate(coordinateX, coordinateY), new HitBox(new Rectangle(tileSize, tileSize), new Coordinate(coordinateX, coordinateY), map[x][y]), 0, false, tileSize, "tile", map[x][y]);
                 chunk.setTile(x, y, tile);
             }

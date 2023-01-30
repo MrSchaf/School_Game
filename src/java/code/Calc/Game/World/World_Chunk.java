@@ -92,13 +92,10 @@ public class World_Chunk {
         return false;
     }
 
-    public boolean intersects(Coordinate max, Coordinate min){
+    public boolean intersects(Coordinate min, Coordinate max){
         Coordinate chunkMin = getCoordinate();
         Coordinate chunkMax = new Coordinate((coordinate.getX() + width), (coordinate.getY() + height));
-        System.out.println(chunkMin.getX() + " " + chunkMin.getY() + " " + chunkMax.getX() + " " + chunkMax.getY());
-        if (chunkMin.toBottomRight(max) && chunkMin.toTopLeft(min)) {
-            return true;
-        } else if(chunkMax.toBottomRight(max) && chunkMax.toTopLeft(min)){
+        if(chunkMin.getX() < max.getX() && chunkMax.getX() > min.getX() && chunkMin.getY() < max.getY() && chunkMax.getY() > min.getY()){
             return true;
         }
         return false;

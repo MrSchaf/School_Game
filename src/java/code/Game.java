@@ -42,7 +42,7 @@ public class Game {
         };
         addKeyListener(action_listener2, Keyboard_Keys.Key_F10);
 
-        // start();
+//        start();
         tick();
         frame();
     }

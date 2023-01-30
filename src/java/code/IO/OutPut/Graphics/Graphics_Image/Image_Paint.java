@@ -13,12 +13,14 @@ public class Image_Paint {
         Graphics g = image.getGraphics();
         Images images = worldObjects.getImages();
 
-        Vector<Object> tiles = worldObjects.getObjects().get("tiles");
-        Vector<Object> entities = worldObjects.getObjects().get("entities");
+        Vector<Object> tiles = worldObjects.getTiles();
+        Vector<Object> entities = worldObjects.getEntities();
 
         for (Object tile : tiles) {
             String img = tile.getImage();
-            g.drawImage(images.getImage(img), tile.getCoordinate().getX(), tile.getCoordinate().getY(), null);
+            int x = tile.getCoordinate().getX() + worldObjects.getMiddleX();
+            int y = tile.getCoordinate().getY() + worldObjects.getMiddleY();
+            g.drawImage(images.getImage(img), x, y, null);
         }
 
         for (Object entity : entities) {

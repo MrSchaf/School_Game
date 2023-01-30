@@ -3,6 +3,7 @@ package code.Calc.Game.Objects.Hitbox;
 import code.Calc.Game.World.Coordinate;
 
 import java.awt.*;
+import java.util.Arrays;
 
 public class HitBox {
     private boolean[][] hitBox;
@@ -16,6 +17,9 @@ public class HitBox {
 
     public HitBox(Rectangle rectangle, Coordinate reference, int height){
         this.hitBox = new boolean[rectangle.width][rectangle.height];
+        for (boolean[] box : hitBox) {
+            Arrays.fill(box, true);
+        }
         this.reference = reference;
     }
 
