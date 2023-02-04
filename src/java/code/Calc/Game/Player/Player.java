@@ -91,7 +91,7 @@ public class Player extends Moving_Object {
     public void tick() {
         generateChunks();
         move();
-//        setCamera();
+        setCamera();
     }
 
     public void setCamera(){

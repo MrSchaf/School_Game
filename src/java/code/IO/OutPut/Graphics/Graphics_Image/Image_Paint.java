@@ -33,15 +33,23 @@ public class Image_Paint {
     }
 
     private static void draw(World_Display_Objects worldObjects, Graphics g, Images images, Vector<Object> objects) {
+        int smallestX = Integer.MAX_VALUE;
+        int smallestY = Integer.MAX_VALUE;
         for (Object object : objects) {
-            drawObject(g, images, object, worldObjects.getMiddleX(), worldObjects.getMiddleY());
+            int x = object.getCoordinate().getX() - worldObjects.getCoordinate().getX();
+            int y = object.getCoordinate().getY() - worldObjects.getCoordinate().getY();
+            drawObject(g, images, object, x, y);
+            if (x < smallestX) {
+                smallestX = x;
+            }
+            if (y < smallestY) {
+                smallestY = y;
+            }
         }
     }
 
-    private static void drawObject(Graphics g, Images images, Object object, int middleX, int middleY) {
+    private static void drawObject(Graphics g, Images images, Object object, int x, int y) {
         String img = object.getImage();
-        int x = object.getCoordinate().getX() + middleX;
-        int y = object.getCoordinate().getY() + middleY;
         g.drawImage(images.getImage(img), x, y, null);
     }
 }

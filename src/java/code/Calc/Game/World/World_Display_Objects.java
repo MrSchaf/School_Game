@@ -38,12 +38,12 @@ public class World_Display_Objects {
     }
 
     public void setObjects(){
-        int minX = coordinate.getX() - (resolution.getWidth() / 2);
-        int minY = coordinate.getY() -  (resolution.getHeight() / 2);
+        int minX = middle.getX() - (resolution.getWidth() / 2);
+        int minY = middle.getY() -  (resolution.getHeight() / 2);
         Coordinate min = new Coordinate(minX, minY);
 
-        int maxX = coordinate.getX() + (resolution.getWidth() / 2);
-        int maxY = coordinate.getY() + (resolution.getHeight() / 2);
+        int maxX = middle.getX() + (resolution.getWidth() / 2);
+        int maxY = middle.getY() + (resolution.getHeight() / 2);
         Coordinate max = new Coordinate(maxX, maxY);
 
         Vector<Object> entityVector = world.getEntities();
@@ -79,6 +79,8 @@ public class World_Display_Objects {
                 chunkVector.add(chunk);
             }
         }
+
+        System.out.println("Chunks: " + chunkVector.size());
         return chunkVector;
     }
 

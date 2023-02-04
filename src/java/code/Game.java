@@ -104,6 +104,5 @@ public class Game {
 
     public void setCamera(Coordinate camera){
         out.setCamera(camera);
-        System.out.println("Camera set to: " + camera);
     }
 }

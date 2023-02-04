@@ -115,6 +115,7 @@ public class Keyboard_Keys {
     }
 
     public void tick(){
+        Vector<Keyboard_Key> pressedKeys = new Vector<>(this.pressedKeys);
         Vector<Keyboard_Key> releasedKeys = new Vector<>();
 
         for(Keyboard_Key key : pressedKeys){

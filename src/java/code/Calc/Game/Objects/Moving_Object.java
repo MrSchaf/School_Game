@@ -13,7 +13,7 @@ public class Moving_Object extends World_Object {
     public Moving_Object(Coordinate coordinate, HitBox hitBox, double rotation, boolean solid, String image, World world) {
         super(coordinate, hitBox, rotation, solid, image, world);
         vel = new Math_Vector(0, 0, true);
-        delta = 1;
+        delta = 3;
     }
 
     public void move() {
