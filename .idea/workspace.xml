@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="fixed camera focus on player">
+    <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="started to fix chunk generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S32_Game/code/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Chunk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/files/images/World.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/files/images/World.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,8 @@
       <workItem from="1675120030525" duration="1973000" />
       <workItem from="1675368476234" duration="33000" />
       <workItem from="1675528009134" duration="1000" />
-      <workItem from="1675528060606" duration="5942000" />
+      <workItem from="1675528060606" duration="6105000" />
+      <workItem from="1675594749758" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="fixed Clock timing">
       <created>1674298948197</created>
@@ -226,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675530921500</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="started to fix chunk generation">
+      <created>1675555546106</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675555546106</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +262,8 @@
     <MESSAGE value="continued working on the World displaying" />
     <MESSAGE value="finished displaying and fixed Key_listener and world-generation" />
     <MESSAGE value="fixed camera focus on player" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed camera focus on player" />
+    <MESSAGE value="started to fix chunk generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="started to fix chunk generation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

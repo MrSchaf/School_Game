@@ -24,7 +24,7 @@ public class World_Chunk {
         tiles = new World_Tile[chunkSize][chunkSize];
     }
 
-    public Coordinate getChunckCoordinate() {
+    public Coordinate getChunkCoordinate() {
         return new Coordinate(getChunkX(), getChunkY());
     }
 
@@ -104,7 +104,7 @@ public class World_Chunk {
         tiles[coordinate.getX()][coordinate.getY()] = tile;
     }
 
-    public static Coordinate getChunckCoordinate(Coordinate coordinate, int size) {
+    public static Coordinate getChunkCoordinate(Coordinate coordinate, int size) {
         return new Coordinate(coordinate.getX() / size, coordinate.getY() / size);
     }
 
@@ -126,7 +126,7 @@ public class World_Chunk {
     public boolean intersects(Coordinate min, Coordinate max) {
         boolean intersects;
 
-        Coordinate chunkMin = getChunckCoordinate();
+        Coordinate chunkMin = getChunkCoordinate();
         Coordinate chunkMax = new Coordinate((chunckCoordinate.getX() + size), (chunckCoordinate.getY() + size));
 
         intersects = Math.intersects(min, max, chunkMin, chunkMax);
@@ -141,7 +141,7 @@ public class World_Chunk {
     public boolean intersects(Object object) {
         boolean intersects;
 
-        Coordinate chunkMin = getChunckCoordinate();
+        Coordinate chunkMin = getChunkCoordinate();
         Coordinate chunkMax = new Coordinate((chunckCoordinate.getX() + size), (chunckCoordinate.getY() + size));
 
         intersects = object.intersects(chunkMin, chunkMax);
