@@ -17,10 +17,10 @@ public class World_Chunk {
     }
 
     public World_Chunk(Coordinate coordinate, int chunkSize, int tileSize, Images images) {
-        this.realCoordinate = new Coordinate(coordinate.getX(), coordinate.getY());
+        this.chunckCoordinate = new Coordinate(coordinate.getX(), coordinate.getY());
         this.chunkSize = chunkSize;
         this.size = chunkSize * tileSize;
-        this.chunckCoordinate = new Coordinate(coordinate.getX() / size, coordinate.getY() / size);
+        this.realCoordinate = getRealCoordinate(chunckCoordinate, chunkSize);
         tiles = new World_Tile[chunkSize][chunkSize];
     }
 
@@ -147,5 +147,9 @@ public class World_Chunk {
         intersects = object.intersects(chunkMin, chunkMax);
 
         return intersects;
+    }
+
+    public boolean equals(World_Chunk chunk) {
+        return (chunk.getChunkCoordinate().equals(getChunkCoordinate()) && chunk.getRealCoordinate().equals(getRealCoordinate()));
     }
 }
