@@ -80,7 +80,6 @@ public class World_Display_Objects {
             }
         }
 
-        System.out.println("Chunks: " + chunkVector.size());
         return chunkVector;
     }
 

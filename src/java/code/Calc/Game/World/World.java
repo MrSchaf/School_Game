@@ -16,6 +16,8 @@ import java.util.Vector;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
+import static code.Calc.Game.World.World_Chunk.getRealCoordinate;
+
 public class World {
     private final int seed;
     private final int chunkSize;
@@ -67,10 +69,11 @@ public class World {
     }
 
     public void generateChunks(Coordinate coordinate){
-        coordinate = getChunkCoordinate(coordinate);
+        System.out.println("Generate: " + coordinate);
+        coordinate = getRealCoordinate(coordinate, chunkSize);
         int size = chunkSize * tileSize;
-        int x = coordinate.getX() * size;
-        int y = coordinate.getY() * size;
+        int x = coordinate.getX();
+        int y = coordinate.getY();
 
         for (int i = -4; i < 4; i++) {
             for (int j = -4; j < 4; j++) {
@@ -80,10 +83,12 @@ public class World {
     }
 
     public void addChunk(Coordinate coordinate){
+        System.out.println("Add: " + coordinate);
         if(!chunkExists(coordinate)){
             coordinate = new Coordinate(coordinate.getX() * chunkSize * tileSize, coordinate.getY() * chunkSize * tileSize);
             World_Chunk chunk = generation.generateChunk(coordinate, chunkSize, tileSize, seed, images);
             chunks.put(coordinate, chunk);
+            System.out.println("Put: " + coordinate);
         }
     }
 
@@ -129,18 +134,11 @@ public class World {
         game.addKeyListener(action_listener, key);
     }
 
-    public Coordinate getChunkCoordinate(Coordinate coordinate){
-        int x = coordinate.getX() / (chunkSize * tileSize);
-        int y = coordinate.getY() / (chunkSize * tileSize);
-
-        return new Coordinate(x, y);
-    }
-
     public boolean chunkExists(Coordinate coordinate){
         AtomicBoolean exists = new AtomicBoolean(false);
         for (int i = 0; i < chunks.size(); i++) {
             chunks.forEach((coordinate1, chunk) -> {
-                coordinate1 = getChunkCoordinate(coordinate1);
+                coordinate1 = getRealCoordinate(coordinate1, chunkSize);
                 if(coordinate1.equals(coordinate)){
                     exists.set(true);
                 }
@@ -153,7 +151,7 @@ public class World {
         AtomicReference<World_Chunk> chunk = new AtomicReference<>();
         for (int i = 0; i < chunks.size(); i++) {
             chunks.forEach((coordinate1, chunk1) -> {
-                coordinate1 = getChunkCoordinate(coordinate1);
+                coordinate1 = getRealCoordinate(coordinate1, chunkSize);
                 if(coordinate1.equals(coordinate)){
                     chunk.set(chunk1);
                 }
@@ -164,11 +162,11 @@ public class World {
 
     public boolean collides(Object object) {
         AtomicBoolean collides = new AtomicBoolean(false);
-        Coordinate coordinate = getChunkCoordinate(object.getCoordinate());
+        Coordinate coordinate = getRealCoordinate(object.getCoordinate(), chunkSize);
         int size = chunkSize * tileSize;
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
-                Coordinate coordinate1 = getChunkCoordinate(new Coordinate(coordinate.getX()* size + i * size, coordinate.getY()* size + j * size));
+                Coordinate coordinate1 = getRealCoordinate(new Coordinate(coordinate.getX()* size + i * size, coordinate.getY()* size + j * size), chunkSize);
                 if(chunkExists(coordinate1)){
                     World_Chunk chunk = getChunk(coordinate1);
                     if(chunk.collides(object)){
