@@ -89,8 +89,9 @@ public class Player extends Moving_Object {
     }
 
     public void tick() {
-        generateChunks();
         move();
+        // System.out.println("Player is at " + getCoordinate());
+        generateChunks();
         setCamera();
     }
 

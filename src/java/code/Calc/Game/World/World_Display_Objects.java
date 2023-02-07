@@ -55,6 +55,7 @@ public class World_Display_Objects {
 
     public Vector<Object> setTiles(Vector<World_Chunk> chunks, Coordinate min, Coordinate max) {
         Vector<World_Chunk> chunkVector = setChunks(chunks, min, max);
+
         Vector<Object> tileVector = new Vector<>();
 
         for (World_Chunk world_chunk : chunkVector) {

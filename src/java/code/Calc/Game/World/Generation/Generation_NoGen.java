@@ -12,7 +12,7 @@ public class Generation_NoGen extends Generation {
     public void genTerrain(int x, int y) {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
-                int r = rnd.nextInt(4);
+                int r = rnd.nextInt(5);
                 if (r == 0) {
                     map[i][j] = 1;
                 } else {

@@ -13,6 +13,7 @@ public class Image_Paint {
 
     public static Image frame(Image image, World_Display_Objects worldObjects){
         Graphics g = image.getGraphics();
+        g.clearRect(0, 0, image.getWidth(), image.getHeight());
         Images images = worldObjects.getImages();
 
         Vector<Object> tiles = worldObjects.getTiles();
@@ -33,18 +34,10 @@ public class Image_Paint {
     }
 
     private static void draw(World_Display_Objects worldObjects, Graphics g, Images images, Vector<Object> objects) {
-        int smallestX = Integer.MAX_VALUE;
-        int smallestY = Integer.MAX_VALUE;
         for (Object object : objects) {
             int x = object.getCoordinate().getX() - worldObjects.getCoordinate().getX();
             int y = object.getCoordinate().getY() - worldObjects.getCoordinate().getY();
             drawObject(g, images, object, x, y);
-            if (x < smallestX) {
-                smallestX = x;
-            }
-            if (y < smallestY) {
-                smallestY = y;
-            }
         }
     }
 

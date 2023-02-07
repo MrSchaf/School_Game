@@ -31,7 +31,7 @@ public abstract class Generation {
 
         map = new int[gridSize][gridSize];
     }
-
+    
     public abstract void genTerrain(int x, int y);
 
     public World_Chunk generateChunk(Coordinate coordinate, int chunkSize, int tileSize, int seed, Images images) {
@@ -39,11 +39,13 @@ public abstract class Generation {
         genTerrain(chunkSize, chunkSize);
         for (int x = 0; x < chunkSize; x++) {
             for (int y = 0; y < chunkSize; y++) {
-                int coordinateX = coordinate.getX() + x * tileSize;
-                int coordinateY = coordinate.getY() + y * tileSize;
+                int coordinateX = chunk.getRealX() + x * tileSize;
+                int coordinateY = chunk.getRealY() + y * tileSize;
+
                 if(coordinateX == 0 && coordinateY == 0){
                     map[x][y] = 0;
                 }
+
                 HitBox hitBox = new HitBox(new Rectangle(tileSize, tileSize), new Coordinate(coordinateX, coordinateY), map[x][y]);
                 World_Tile tile = new World_Tile(new Coordinate(coordinateX, coordinateY), hitBox, 0, false, tileSize, "tile" + map[x][y], map[x][y], world);
                 chunk.setTile(x, y, tile);

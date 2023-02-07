@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3f4da158-2a2e-4a3b-9dfc-12e01f265517" name="Changes" comment="started to fix chunk generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Moving_Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Objects/Object.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation_NoGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/Generation/Generation_NoGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/Calc/Game/World/World_Display_Objects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image_Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/code/IO/OutPut/Graphics/Graphics_Image/Image_Paint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/files/images/World.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/files/images/World.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +126,11 @@
       <workItem from="1675528060606" duration="6105000" />
       <workItem from="1675594749758" duration="2697000" />
       <workItem from="1675598423930" duration="2000" />
+      <workItem from="1675674464682" duration="3171000" />
+      <workItem from="1675677861628" duration="1141000" />
+      <workItem from="1675679061856" duration="1590000" />
+      <workItem from="1675680981751" duration="6636000" />
+      <workItem from="1675752704152" duration="4756000" />
     </task>
     <task id="LOCAL-00001" summary="fixed Clock timing">
       <created>1674298948197</created>

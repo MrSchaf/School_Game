@@ -19,6 +19,7 @@ public abstract class Object {
         this.rotation = rotation;
         this.name = name;
     }
+    //moritz is gay
 
     public Object(Coordinate coordinate, HitBox hitBox, double rotation, String name, World world) {
         this.world = world;
